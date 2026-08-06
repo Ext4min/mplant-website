@@ -1,0 +1,370 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: 'de'
+
+collections:
+
+  # ============================================================
+  # STARTSEITE
+  # ============================================================
+  - name: "startseite"
+    label: "Startseite"
+    delete: false
+    editor:
+      preview: false
+    files:
+
+      - name: "hero"
+        label: "Startbild & Titel"
+        file: "content/hero.json"
+        description: "Das große Bild ganz oben auf der Startseite, mit Titel und Untertitel."
+        fields:
+          - { name: "bild", label: "Hintergrundbild", widget: "image", required: true }
+          - { name: "titel", label: "Großer Titel", widget: "string" }
+          - { name: "untertitel", label: "Untertitel (in grüner Schreibschrift)", widget: "string" }
+          - { name: "beschreibung", label: "Beschreibungstext darunter", widget: "text" }
+
+      - name: "aktuell"
+        label: "Aktuell im Hof (dezenter Streifen)"
+        file: "content/aktuell.json"
+        description: "Der schmale grüne Streifen zwischen Hero und Willkommen. Perfekt für aktuelle Hinweise, saisonale Ware, kurze Nachrichten."
+        fields:
+          - { name: "anzeigen", label: "Streifen anzeigen?", widget: "boolean", default: true }
+          - { name: "text", label: "Text", widget: "string", hint: "Kurzer, aktueller Hinweis. z.B. 'Diese Woche frisch: Sommerflor.'" }
+          - { name: "link_text", label: "Button-Text", widget: "string", default: "Bei uns vorbeischauen" }
+
+      - name: "karriere_teaser"
+        label: "Karriere-Banner (grüner Streifen mit Bewerbungshinweis)"
+        file: "content/karriere_teaser.json"
+        description: "Der grüne Banner 'Wir suchen Verstärkung', der jetzt oben auf der Seite platziert ist."
+        fields:
+          - { name: "anzeigen", label: "Banner anzeigen?", widget: "boolean", default: true }
+          - { name: "ueberschrift", label: "Überschrift", widget: "string" }
+          - { name: "text", label: "Text", widget: "text" }
+          - { name: "button_text", label: "Button-Text", widget: "string", default: "Offene Stellen" }
+
+      - name: "saeulen"
+        label: "Die zwei Bereiche (Pflanzenhof & Garten)"
+        file: "content/saeulen.json"
+        description: "Die zwei großen Kacheln 'Unser Pflanzenhof' und 'Garten & Landschaft'."
+        fields:
+          - { name: "willkommen_ueberschrift", label: "Überschrift 'Willkommen' (grüne Schreibschrift)", widget: "string" }
+          - { name: "haupt_ueberschrift", label: "Haupt-Überschrift", widget: "string" }
+          - { name: "beschreibung", label: "Beschreibungstext", widget: "text" }
+          - label: "Kachel 'Pflanzenhof'"
+            name: "pflanzenhof_kachel"
+            widget: "object"
+            fields:
+              - { name: "bild", label: "Bild", widget: "image" }
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Text", widget: "text" }
+              - { name: "link_text", label: "Link-Text unten", widget: "string" }
+          - label: "Kachel 'Garten & Landschaft'"
+            name: "garten_kachel"
+            widget: "object"
+            fields:
+              - { name: "bild", label: "Bild", widget: "image" }
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Text", widget: "text" }
+              - { name: "link_text", label: "Link-Text unten", widget: "string" }
+
+      - name: "pflanzenhof_detail"
+        label: "Pflanzenhof – Detailbereich"
+        file: "content/pflanzenhof.json"
+        description: "Die Sektion mit den vier kleinen Bildern und dem Text 'Einfach mal vorbeischauen'."
+        fields:
+          - { name: "ueberschrift", label: "Überschrift (in grüner Schreibschrift)", widget: "string" }
+          - { name: "haupt_ueberschrift", label: "Haupt-Überschrift", widget: "string" }
+          - { name: "haupttext", label: "Beschreibungstext", widget: "text" }
+          - { name: "bild_oben_links", label: "Bild oben links (Hochformat)", widget: "image" }
+          - { name: "bild_unten_links_titel", label: "Titel der grünen Kachel", widget: "string" }
+          - { name: "bild_unten_links_text", label: "Text der grünen Kachel", widget: "string" }
+          - { name: "bild_oben_rechts", label: "Bild oben rechts (Quadrat)", widget: "image" }
+          - { name: "bild_unten_rechts", label: "Bild unten rechts (Hochformat)", widget: "image" }
+          - label: "Drei kleine Punkte"
+            name: "punkte"
+            widget: "object"
+            fields:
+              - label: "Punkt 1: Beratung"
+                name: "p1"
+                widget: "object"
+                fields:
+                  - { name: "titel", label: "Titel", widget: "string" }
+                  - { name: "text", label: "Text", widget: "text" }
+              - label: "Punkt 2: Qualität"
+                name: "p2"
+                widget: "object"
+                fields:
+                  - { name: "titel", label: "Titel", widget: "string" }
+                  - { name: "text", label: "Text", widget: "text" }
+              - label: "Punkt 3: Drinnen & Draußen"
+                name: "p3"
+                widget: "object"
+                fields:
+                  - { name: "titel", label: "Titel", widget: "string" }
+                  - { name: "text", label: "Text", widget: "text" }
+
+      - name: "sortiment"
+        label: "Pflanzenhof – Sortiment-Kacheln"
+        file: "content/sortiment.json"
+        description: "Die sechs Kacheln im Sortiments-Bereich (Bäume, Rosen, Gestecke, Dekoladen, Beratung, Erde)."
+        fields:
+          - { name: "ueberschrift", label: "Überschrift (in grüner Schreibschrift)", widget: "string" }
+          - { name: "haupt_ueberschrift", label: "Haupt-Überschrift", widget: "string" }
+          - label: "Kachel 1: Bäume, Sträucher & Stauden (groß)"
+            name: "kachel1"
+            widget: "object"
+            fields:
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Text", widget: "text" }
+              - { name: "bild", label: "Bild im Hintergrund", widget: "image", required: false }
+          - label: "Kachel 2: Rosen & Blühendes (grün)"
+            name: "kachel2"
+            widget: "object"
+            fields:
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Text", widget: "text" }
+          - label: "Kachel 3: Saisonale Gestecke"
+            name: "kachel3"
+            widget: "object"
+            fields:
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Text", widget: "text" }
+          - label: "Kachel 4: Dekoladen"
+            name: "kachel4"
+            widget: "object"
+            fields:
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Text", widget: "text" }
+              - { name: "bild", label: "Bild rechts", widget: "image" }
+          - label: "Kachel 5: Beratung"
+            name: "kachel5"
+            widget: "object"
+            fields:
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Text", widget: "text" }
+          - label: "Kachel 6: Gute Erde & Zubehör (dunkel)"
+            name: "kachel6"
+            widget: "object"
+            fields:
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Text", widget: "text" }
+
+      - name: "galabau"
+        label: "Garten- und Landschaftsbau"
+        file: "content/galabau.json"
+        description: "Der dunkle Bereich mit den sechs Leistungs-Kacheln und dem Ablauf 'So läuft ein Projekt bei uns'."
+        fields:
+          - { name: "ueberschrift", label: "Überschrift (in grüner Schreibschrift)", widget: "string" }
+          - { name: "haupt_ueberschrift", label: "Haupt-Überschrift", widget: "string" }
+          - { name: "beschreibung", label: "Beschreibungstext", widget: "text" }
+          - { name: "button_text", label: "Button-Text", widget: "string" }
+          - { name: "bild", label: "Großes Bild rechts oben", widget: "image" }
+          - label: "Leistungs-Kacheln (genau 6)"
+            name: "leistungen"
+            widget: "list"
+            min: 6
+            max: 6
+            summary: "{{fields.titel}}"
+            fields:
+              - name: "icon"
+                label: "Symbol"
+                widget: "select"
+                options:
+                  - { label: "Architektur (Zirkel)", value: "architecture" }
+                  - { label: "Pflanze / Garten", value: "yard" }
+                  - { label: "Wassertropfen", value: "water_drop" }
+                  - { label: "Schere", value: "content_cut" }
+                  - { label: "Gras", value: "grass" }
+                  - { label: "Werkzeug", value: "handyman" }
+                default: "yard"
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Beschreibung", widget: "text" }
+          - label: "So läuft ein Projekt bei uns (Zeitstrahl)"
+            name: "ablauf"
+            widget: "object"
+            fields:
+              - { name: "ueberschrift", label: "Überschrift", widget: "string" }
+              - label: "Schritte (genau 4)"
+                name: "schritte"
+                widget: "list"
+                min: 4
+                max: 4
+                summary: "{{fields.nummer}}. {{fields.titel}}"
+                fields:
+                  - { name: "nummer", label: "Nummer", widget: "string" }
+                  - { name: "titel", label: "Titel", widget: "string" }
+                  - { name: "text", label: "Beschreibung", widget: "text" }
+
+      - name: "slider"
+        label: "Vorher/Nachher Bilder-Slider"
+        file: "content/slider.json"
+        description: "Ein interaktives Vorher/Nachher-Bild im GaLaBau-Bereich. Ideal für Projekt-Referenzen: Zeigen Sie einen Garten vor der Umgestaltung und nach der Fertigstellung. Am besten zwei Bilder vom gleichen Standort im gleichen Winkel."
+        fields:
+          - { name: "ueberschrift", label: "Überschrift (grüne Schreibschrift)", widget: "string" }
+          - { name: "haupt_ueberschrift", label: "Haupt-Überschrift", widget: "string" }
+          - { name: "beschreibung", label: "Beschreibungstext", widget: "text" }
+          - { name: "vorher_bild", label: "Vorher-Bild", widget: "image" }
+          - { name: "vorher_label", label: "Vorher-Beschriftung", widget: "string", default: "Vorher" }
+          - { name: "nachher_bild", label: "Nachher-Bild", widget: "image" }
+          - { name: "nachher_label", label: "Nachher-Beschriftung", widget: "string", default: "Nachher" }
+
+      - name: "galerie"
+        label: "Galerie / Referenzen"
+        file: "content/galerie.json"
+        description: "Die Bilder in der Sektion 'Vom Hof und aus den Gärten'."
+        fields:
+          - { name: "ueberschrift", label: "Überschrift (in grüner Schreibschrift)", widget: "string" }
+          - { name: "haupt_ueberschrift", label: "Haupt-Überschrift", widget: "string" }
+          - { name: "instagram_link_text", label: "Instagram-Link-Text", widget: "string" }
+          - label: "Bilder"
+            name: "bilder"
+            widget: "list"
+            min: 4
+            summary: "{{fields.titel}}"
+            fields:
+              - { name: "bild", label: "Bild", widget: "image" }
+              - { name: "titel", label: "Bildbeschreibung (für Suchmaschinen)", widget: "string" }
+
+      - name: "kontakt"
+        label: "Kontakt & Öffnungszeiten"
+        file: "content/kontakt.json"
+        fields:
+          - { name: "ueberschrift", label: "Überschrift (in grüner Schreibschrift)", widget: "string" }
+          - { name: "haupt_ueberschrift", label: "Haupt-Überschrift", widget: "string" }
+          - { name: "intro_text", label: "Einleitungstext", widget: "text" }
+          - label: "Adresse"
+            name: "adresse"
+            widget: "object"
+            fields:
+              - { name: "strasse", label: "Straße und Hausnummer", widget: "string" }
+              - { name: "plz_ort", label: "PLZ und Ort", widget: "string" }
+          - { name: "telefon", label: "Telefonnummer (Anzeige)", widget: "string" }
+          - { name: "telefon_zum_anrufen", label: "Telefonnummer für Anruf-Link", widget: "string", hint: "Format: +491701234567" }
+          - { name: "email", label: "E-Mail-Adresse", widget: "string" }
+          - { name: "instagram", label: "Instagram-Nutzername (ohne @)", widget: "string" }
+          - label: "Öffnungszeiten"
+            name: "oeffnungszeiten"
+            widget: "object"
+            fields:
+              - { name: "mo_fr", label: "Montag bis Freitag", widget: "string" }
+              - { name: "samstag", label: "Samstag", widget: "string" }
+              - { name: "sonntag", label: "Sonntag", widget: "string" }
+              - { name: "hinweis", label: "Hinweis darunter", widget: "string" }
+
+      - name: "stimmen"
+        label: "Kundenstimmen (Google-Rezensionen)"
+        file: "content/stimmen.json"
+        fields:
+          - { name: "ueberschrift", label: "Überschrift (in grüner Schreibschrift)", widget: "string" }
+          - { name: "haupt_ueberschrift", label: "Haupt-Überschrift", widget: "string" }
+          - label: "Rezensionen"
+            name: "rezensionen"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { name: "name", label: "Name", widget: "string" }
+              - { name: "initialen", label: "Initialen", widget: "string" }
+              - { name: "text", label: "Text", widget: "text" }
+              - { name: "quelle", label: "Quelle", widget: "string" }
+
+  # ============================================================
+  # KARRIERE-SEITE
+  # ============================================================
+  - name: "karriereseite"
+    label: "Karriere-Seite"
+    delete: false
+    editor:
+      preview: false
+    files:
+
+      - name: "karriere_kopf"
+        label: "Karriere – Kopfbereich"
+        file: "content/karriere_kopf.json"
+        fields:
+          - { name: "hintergrundbild", label: "Hintergrundbild", widget: "image" }
+          - { name: "ueberschrift_klein", label: "Kleine Überschrift", widget: "string" }
+          - { name: "ueberschrift_gross", label: "Große Überschrift", widget: "string" }
+          - { name: "untertitel", label: "Beschreibungstext", widget: "text" }
+          - { name: "button_text", label: "Button-Text", widget: "string" }
+
+      - name: "vorteile"
+        label: "Vorteile (Drei Kacheln 'Warum mplant?')"
+        file: "content/vorteile.json"
+        fields:
+          - { name: "ueberschrift", label: "Überschrift", widget: "string" }
+          - label: "Vorteile (genau 3)"
+            name: "vorteile"
+            widget: "list"
+            min: 3
+            max: 3
+            summary: "{{fields.titel}}"
+            fields:
+              - name: "icon"
+                label: "Symbol"
+                widget: "select"
+                options:
+                  - { label: "Personen / Team", value: "groups" }
+                  - { label: "Park / Pflanzen", value: "park" }
+                  - { label: "Grafik aufwärts", value: "trending_up" }
+                  - { label: "Herz", value: "favorite" }
+                  - { label: "Stern", value: "star" }
+                  - { label: "Uhr", value: "schedule" }
+                default: "groups"
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Text", widget: "text" }
+
+      - name: "stellen"
+        label: "Offene Stellen"
+        file: "content/stellen.json"
+        fields:
+          - { name: "ueberschrift", label: "Überschrift", widget: "string" }
+          - { name: "intro", label: "Einleitungstext", widget: "string" }
+          - label: "Stellenanzeigen"
+            name: "stellen"
+            widget: "list"
+            summary: "{{fields.titel}}"
+            fields:
+              - name: "icon"
+                label: "Symbol"
+                widget: "select"
+                options:
+                  - { label: "Pflanze (Garten)", value: "yard" }
+                  - { label: "Laden/Verkauf", value: "storefront" }
+                  - { label: "Wasser", value: "water_drop" }
+                  - { label: "Werkzeug", value: "handyman" }
+                  - { label: "Lieferung", value: "local_shipping" }
+                  - { label: "Schere", value: "content_cut" }
+                default: "yard"
+              - { name: "titel", label: "Stellentitel", widget: "string" }
+              - { name: "art", label: "Anstellungsart", widget: "string" }
+              - { name: "ort", label: "Ort", widget: "string" }
+              - { name: "verfuegbar_ab", label: "Verfügbar ab", widget: "string" }
+              - label: "Aufgaben"
+                name: "aufgaben"
+                widget: "list"
+                summary: "{{fields.text}}"
+                field: { name: "text", label: "Aufgabe", widget: "string" }
+              - label: "Anforderungen"
+                name: "anforderungen"
+                widget: "list"
+                summary: "{{fields.text}}"
+                field: { name: "text", label: "Anforderung", widget: "string" }
+              - label: "Was wir bieten"
+                name: "vorteile"
+                widget: "list"
+                summary: "{{fields.text}}"
+                field: { name: "text", label: "Vorteil", widget: "string" }
+
+      - name: "bewerbung"
+        label: "Bewerbungs-Bereich"
+        file: "content/bewerbung.json"
+        fields:
+          - { name: "ueberschrift", label: "Überschrift", widget: "string" }
+          - { name: "intro", label: "Einleitungstext", widget: "text" }
+          - { name: "datenschutzhinweis", label: "Datenschutzhinweis", widget: "string" }

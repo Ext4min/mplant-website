@@ -1,0 +1,64 @@
+{
+  "ueberschrift": "Garten- und Landschaftsbau",
+  "haupt_ueberschrift": "Planen. Pflanzen. Pflegen.",
+  "beschreibung": "Ob ein paar neue Beete, eine komplette Umgestaltung oder die Bewässerung für den Sommer: Wir planen, pflanzen, bauen und pflegen. Alles mit Leuten, die das Handwerk können, und mit Pflanzen von unserem eigenen Hof.",
+  "button_text": "Projekt besprechen",
+  "bild": "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1200&q=80",
+  "leistungen": [
+    {
+      "icon": "architecture",
+      "titel": "Gartengestaltung & Planung",
+      "text": "Wir kommen vorbei, schauen uns Ihr Grundstück an und entwerfen einen Garten, der zu Ihnen und zum Boden passt."
+    },
+    {
+      "icon": "yard",
+      "titel": "Bepflanzung",
+      "text": "Vom Hausbaum über die Hecke bis zum Staudenbeet. Wir wählen die Pflanzen aus, pflanzen fachgerecht und sorgen dafür, dass alles anwächst."
+    },
+    {
+      "icon": "water_drop",
+      "titel": "Bewässerung",
+      "text": "Automatische Bewässerungsanlagen und Tropfbewässerung, damit Ihr Garten auch im heißen Brandenburger Sommer grün bleibt."
+    },
+    {
+      "icon": "content_cut",
+      "titel": "Baum- & Heckenschnitt",
+      "text": "Regelmäßiger Formschnitt, Verjüngung alter Gehölze, Obstbaumschnitt. Fachgerecht und zur richtigen Jahreszeit."
+    },
+    {
+      "icon": "grass",
+      "titel": "Rasen & Flächen",
+      "text": "Neuanlage als Saat oder Rollrasen, Vertikutieren, Nachsaat. Damit aus trister Fläche wieder eine grüne Wiese wird."
+    },
+    {
+      "icon": "handyman",
+      "titel": "Pflege im Jahreslauf",
+      "text": "Regelmäßige Gartenpflege, Winterdienst, Herbstschnitt. Wir kommen wieder, so oft, wie Ihr Garten es braucht."
+    }
+  ],
+  "ablauf": {
+    "ueberschrift": "So läuft ein Projekt bei uns",
+    "schritte": [
+      {
+        "nummer": "1",
+        "titel": "Gespräch",
+        "text": "Sie rufen an oder schreiben uns. Wir hören zu, was Sie sich vorstellen."
+      },
+      {
+        "nummer": "2",
+        "titel": "Vor Ort",
+        "text": "Wir kommen vorbei, schauen uns die Fläche an und machen Ihnen einen ehrlichen Vorschlag."
+      },
+      {
+        "nummer": "3",
+        "titel": "Umsetzung",
+        "text": "Unser Team packt an, mit Pflanzen direkt vom Hof und in der abgesprochenen Zeit."
+      },
+      {
+        "nummer": "4",
+        "titel": "Pflege",
+        "text": "Auf Wunsch bleiben wir an Bord und kümmern uns weiter, so oft wie Sie mögen."
+      }
+    ]
+  }
+}

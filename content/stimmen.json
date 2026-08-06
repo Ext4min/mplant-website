@@ -1,0 +1,42 @@
+{
+  "ueberschrift": "Google-Rezensionen",
+  "haupt_ueberschrift": "Das sagen unsere Kunden",
+  "rezensionen": [
+    {
+      "name": "Andre Tanner",
+      "initialen": "AT",
+      "text": "Sehr nette Inhaber mit viel Geschmack fürs Schöne. Von der wunderschönen Deko bis zur großen Auswahl an Pflanzen ist alles vorhanden. Dazu kommt eine sehr gute Beratung. Großes Lob.",
+      "quelle": "Google-Rezension"
+    },
+    {
+      "name": "Susanne Maruhn",
+      "initialen": "SM",
+      "text": "Sehr gute Beratung und schöne Auswahl. Meine dort erworbenen Rosen sind alle angewachsen und sind traumhaft. Schade, dass mein Garten so klein ist… 😉",
+      "quelle": "Google-Rezension"
+    },
+    {
+      "name": "Susanne Hennig",
+      "initialen": "SH",
+      "text": "Super schöne Gärtnerei. Niedliches Dekolädchen mit geschmackvoll und liebevoll ausgesuchten schönen Dingen.",
+      "quelle": "Google-Rezension"
+    },
+    {
+      "name": "Ricky Czygan",
+      "initialen": "RC",
+      "text": "Ein toller Hof mit vielen schönen Pflanzen, um seinen Garten verschönern zu können. Sehr empfehlenswert. 🍀",
+      "quelle": "Google-Rezension"
+    },
+    {
+      "name": "Petra Wenzel",
+      "initialen": "PW",
+      "text": "Nette Bedienung, schöne Pflanzen und besonders die Dekosachen sind schön.",
+      "quelle": "Google-Rezension"
+    },
+    {
+      "name": "Carsten Rosenbusch",
+      "initialen": "CR",
+      "text": "Sehr gute Beratung und Qualität.",
+      "quelle": "Google-Rezension"
+    }
+  ]
+}

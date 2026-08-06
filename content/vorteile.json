@@ -1,0 +1,20 @@
+{
+  "ueberschrift": "Warum mplant?",
+  "vorteile": [
+    {
+      "icon": "groups",
+      "titel": "Familiäres Team",
+      "text": "Kein Konzern, sondern ein eingespieltes Team, in dem jeder gehört wird. Bei uns kennt jeder jeden. Und alle ziehen an einem Strang."
+    },
+    {
+      "icon": "park",
+      "titel": "Schöner Arbeitsplatz",
+      "text": "Direkt am Beetzsee, mit eigenem Pflanzenhof und vielfältigen Projekten in der Region. Jeden Tag andere Aufgaben, nie Routine."
+    },
+    {
+      "icon": "trending_up",
+      "titel": "Faire Bedingungen",
+      "text": "Pünktliche Bezahlung, geregelte Arbeitszeiten, Weiterbildung. Wir wissen, dass gute Arbeit auch gute Bedingungen braucht."
+    }
+  ]
+}

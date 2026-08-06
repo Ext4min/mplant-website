@@ -1,0 +1,128 @@
+{
+  "ueberschrift": "Offene Stellen",
+  "intro": "Klicken Sie auf eine Stelle, um Details und Anforderungen zu sehen.",
+  "stellen": [
+    {
+      "icon": "yard",
+      "titel": "Garten- und Landschaftsbauer (m/w/d)",
+      "art": "Vollzeit",
+      "ort": "Brielow am Beetzsee",
+      "verfuegbar_ab": "Ab sofort",
+      "aufgaben": [
+        {
+          "text": "Anlage und Pflege von Privat- und Gewerbegärten"
+        },
+        {
+          "text": "Bepflanzung von Beeten, Hecken und Bäumen"
+        },
+        {
+          "text": "Bau und Wartung von Bewässerungsanlagen"
+        },
+        {
+          "text": "Baum- und Heckenschnitt, Rasenpflege"
+        },
+        {
+          "text": "Wege- und Mauerbau in kleinerem Umfang"
+        }
+      ],
+      "anforderungen": [
+        {
+          "text": "Abgeschlossene Ausbildung im Garten- und Landschaftsbau, oder mehrjährige Praxiserfahrung"
+        },
+        {
+          "text": "Führerschein Klasse B (BE oder C1 von Vorteil)"
+        },
+        {
+          "text": "Spaß an der Arbeit draußen, bei jedem Wetter"
+        },
+        {
+          "text": "Teamgeist und ein sauberes Auftreten beim Kunden"
+        },
+        {
+          "text": "Pflanzenkenntnisse sind ein Plus, aber kein Muss"
+        }
+      ],
+      "vorteile": [
+        {
+          "text": "Faire, leistungsgerechte Bezahlung"
+        },
+        {
+          "text": "Unbefristete Festanstellung"
+        },
+        {
+          "text": "Modernes Werkzeug und gepflegte Fahrzeuge"
+        },
+        {
+          "text": "Arbeitskleidung wird gestellt"
+        },
+        {
+          "text": "Weiterbildung wird unterstützt"
+        },
+        {
+          "text": "Familiäres Team mit kurzen Wegen"
+        }
+      ]
+    },
+    {
+      "icon": "storefront",
+      "titel": "Verkäufer (m/w/d) für unseren Pflanzenhof",
+      "art": "Vollzeit oder Teilzeit",
+      "ort": "Brielow am Beetzsee",
+      "verfuegbar_ab": "Ab sofort",
+      "aufgaben": [
+        {
+          "text": "Beratung unserer Kundinnen und Kunden zu Pflanzen, Erden und Deko"
+        },
+        {
+          "text": "Pflege und Präsentation des Sortiments auf dem Hof und im Dekoladen"
+        },
+        {
+          "text": "Binden saisonaler Gestecke und Sträuße"
+        },
+        {
+          "text": "Wareneingang, Auszeichnung und Lagerpflege"
+        },
+        {
+          "text": "Kassiertätigkeit"
+        }
+      ],
+      "anforderungen": [
+        {
+          "text": "Freude am Umgang mit Menschen und am Verkaufen"
+        },
+        {
+          "text": "Interesse an Pflanzen, Garten und Deko. Vorkenntnisse sind willkommen, aber nicht zwingend"
+        },
+        {
+          "text": "Idealerweise Ausbildung als Florist:in, Einzelhandelskauffrau/-mann oder Gärtner:in im Einzelhandel"
+        },
+        {
+          "text": "Gepflegtes Auftreten und ein gutes Auge fürs Ästhetische"
+        },
+        {
+          "text": "Bereitschaft, auch samstags zu arbeiten"
+        }
+      ],
+      "vorteile": [
+        {
+          "text": "Faire Bezahlung"
+        },
+        {
+          "text": "Voll- oder Teilzeit nach Absprache"
+        },
+        {
+          "text": "Schöner, abwechslungsreicher Arbeitsplatz"
+        },
+        {
+          "text": "Mitarbeiterrabatt auf das gesamte Sortiment"
+        },
+        {
+          "text": "Einarbeitung im Team"
+        },
+        {
+          "text": "Sonntag immer frei"
+        }
+      ]
+    }
+  ]
+}

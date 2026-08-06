@@ -1,0 +1,17 @@
+{
+  "willkommen_ueberschrift": "Willkommen",
+  "haupt_ueberschrift": "Zwei Standbeine, ein Team.",
+  "beschreibung": "mplant ist Pflanzenhof und Garten- und Landschaftsbau zugleich. Kommen Sie bei uns am Beetzsee vorbei und stöbern, oder lassen Sie uns Ihren Garten bei Ihnen zu Hause anlegen und pflegen.",
+  "pflanzenhof_kachel": {
+    "bild": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80",
+    "titel": "Unser Pflanzenhof",
+    "text": "Bäume, Stauden, Rosen, Saisonpflanzen, dazu unser Dekoladen. Zum Stöbern, Beraten lassen und Mitnehmen.",
+    "link_text": "Zum Sortiment"
+  },
+  "garten_kachel": {
+    "bild": "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1200&q=80",
+    "titel": "Garten & Landschaft",
+    "text": "Gartengestaltung, Bepflanzung, Bewässerung und Pflege. Wir machen aus Ihrer Fläche einen Garten, in dem Sie gerne sind.",
+    "link_text": "Zu den Leistungen"
+  }
+}
