@@ -10,7 +10,8 @@
   }
 
   const files = [
-    'hero', 'aktuell', 'saeulen', 'pflanzenhof', 'sortiment', 'galabau', 'slider', 'galerie',
+    'hero', 'aktuell', 'oeffnungszeiten_ribbon', 'aktuelles_teaser', 'aktuelles',
+    'saeulen', 'pflanzenhof', 'sortiment', 'galabau', 'slider', 'galerie',
     'karriere_teaser', 'kontakt', 'stimmen',
     'karriere_kopf', 'vorteile', 'stellen', 'bewerbung'
   ];
@@ -32,6 +33,9 @@
     applyKontaktLinks(data);
     applyMaps(data);
     applyAktuell(data);
+    applyRibbon(data);
+    applyAktuellesTeaser(data);
+    applyAktuellesSeite(data);
     applyKarriereTeaser(data);
     applySortiment(data);
     applyGalabau(data);
@@ -103,6 +107,59 @@
       return;
     }
     strip.style.display = '';
+  }
+
+
+  // ---- Öffnungszeiten-Schleife (Ecken-Ribbon) ----
+  function applyRibbon(data) {
+    const ribbon = document.querySelector('[data-cms-ribbon]');
+    if (!ribbon) return;
+    const cfg = data.oeffnungszeiten_ribbon || {};
+    if (cfg.anzeigen === false) {
+      ribbon.style.display = 'none';
+      return;
+    }
+    const saison = ribbon.querySelector('[data-ribbon-saison]');
+    const hinweis = ribbon.querySelector('[data-ribbon-hinweis]');
+    if (saison) saison.textContent = cfg.saison || '';
+    if (hinweis) hinweis.textContent = cfg.hinweis || '';
+  }
+
+  // ---- Aktuelles-Teaser Button auf Startseite ----
+  function applyAktuellesTeaser(data) {
+    const el = document.querySelector('[data-cms-aktuelles-teaser]');
+    if (!el) return;
+    const cfg = data.aktuelles_teaser || {};
+    if (cfg.anzeigen === false) {
+      el.style.display = 'none';
+    }
+  }
+
+  // ---- Aktuelles-Seite: Kopf + Kacheln ----
+  function applyAktuellesSeite(data) {
+    const container = document.querySelector('[data-cms-aktuelles-kacheln]');
+    if (!container) return;
+    const a = data.aktuelles || {};
+    const kacheln = a.kacheln || [];
+    container.innerHTML = '';
+    kacheln.forEach(k => {
+      const card = document.createElement('div');
+      card.className = 'bg-surface-container-lowest border border-outline-variant/15 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col';
+      card.innerHTML =
+        '<div class="aspect-[4/3] overflow-hidden bg-surface-container-highest">' +
+          '<img loading="lazy" class="w-full h-full object-cover kachel-bild">' +
+        '</div>' +
+        '<div class="p-6 flex-grow flex flex-col">' +
+          '<h3 class="text-xl font-bold text-brand-dark mb-2 kachel-titel"></h3>' +
+          '<p class="text-on-surface-variant kachel-text"></p>' +
+        '</div>';
+      const img = card.querySelector('.kachel-bild');
+      if (k.bild) img.src = k.bild;
+      img.alt = k.titel || 'Aktuell im Hof';
+      card.querySelector('.kachel-titel').textContent = k.titel || '';
+      card.querySelector('.kachel-text').textContent = k.text || '';
+      container.appendChild(card);
+    });
   }
 
   function applyKarriereTeaser(data) {

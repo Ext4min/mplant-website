@@ -18,6 +18,24 @@ collections:
     editor:
       preview: false
     files:
+      - name: "oeffnungszeiten_ribbon"
+        label: "Öffnungszeiten-Schleife (kleine Ecke oben rechts)"
+        file: "content/oeffnungszeiten_ribbon.json"
+        description: "Die kleine Schleife oben rechts auf jeder Seite. Ideal für saisonale Öffnungszeiten. Kann jederzeit ausgeblendet werden."
+        fields:
+          - { name: "anzeigen", label: "Schleife anzeigen?", widget: "boolean", default: true }
+          - { name: "saison", label: "Saison-Zeitraum", widget: "string", hint: "z.B. 'Sommer 30.7 - 10.1'" }
+          - { name: "hinweis", label: "Zusatzhinweis", widget: "string", hint: "z.B. 'Mittwoch bis 14 Uhr geöffnet'" }
+
+      - name: "aktuelles_teaser"
+        label: "Aktuelles-Button (auf Startseite)"
+        file: "content/aktuelles_teaser.json"
+        description: "Der Button/Banner auf der Startseite, der zur 'Aktuelles im Hof'-Seite führt. Zwischen Karriere-Banner und Willkommen platziert."
+        fields:
+          - { name: "anzeigen", label: "Button anzeigen?", widget: "boolean", default: true }
+          - { name: "ueberschrift", label: "Überschrift", widget: "string" }
+          - { name: "text", label: "Kurzer Text", widget: "text" }
+          - { name: "button_text", label: "Button-Text", widget: "string" }
 
       - name: "hero"
         label: "Startbild & Titel"
@@ -368,3 +386,36 @@ collections:
           - { name: "ueberschrift", label: "Überschrift", widget: "string" }
           - { name: "intro", label: "Einleitungstext", widget: "text" }
           - { name: "datenschutzhinweis", label: "Datenschutzhinweis", widget: "string" }
+
+  # ============================================================
+  # AKTUELLES-SEITE
+  # ============================================================
+  - name: "aktuelles_seite"
+    label: "Aktuelles im Hof (eigene Seite)"
+    delete: false
+    editor:
+      preview: false
+    files:
+
+      - name: "aktuelles"
+        label: "Aktuelles im Hof - Inhalte"
+        file: "content/aktuelles.json"
+        description: "Die eigene Seite für aktuelle Angebote und Pflanzen. Mitarbeiter können hier beliebig viele Kacheln hinzufügen, bearbeiten oder entfernen."
+        fields:
+          - label: "Kopfbereich"
+            name: "kopf"
+            widget: "object"
+            fields:
+              - { name: "hintergrundbild", label: "Hintergrundbild", widget: "image" }
+              - { name: "ueberschrift_klein", label: "Kleine Überschrift (grüne Schreibschrift)", widget: "string" }
+              - { name: "ueberschrift_gross", label: "Große Überschrift", widget: "string" }
+              - { name: "untertitel", label: "Beschreibungstext", widget: "text" }
+          - label: "Kacheln (beliebig viele)"
+            name: "kacheln"
+            widget: "list"
+            summary: "{{fields.titel}}"
+            fields:
+              - { name: "bild", label: "Bild", widget: "image" }
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Beschreibungstext", widget: "text" }
+          - { name: "abschluss_text", label: "Abschluss-Text (unten auf der Seite)", widget: "text" }

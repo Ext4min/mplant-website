@@ -39,6 +39,26 @@ tailwind.config = { darkMode: "class", theme: { extend: {
   .section-animate.section-in-view { opacity:1; transform:translateY(0); }
   nav { transition: background-color .3s ease, box-shadow .3s ease; }
   nav.nav-scrolled { background-color: rgba(255,255,255,.95); box-shadow: 0 6px 30px rgba(0,0,0,.08); }
+  /* Öffnungszeiten-Schleife (Corner-Ribbon) */
+  .corner-ribbon {
+    position: fixed; top: 20px; right: -55px; z-index: 60;
+    background: #6bac2e; color: #ffffff;
+    padding: 10px 60px; transform: rotate(45deg);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    text-align: center; font-family: 'Carlito', sans-serif;
+    text-decoration: none; transition: background 0.2s ease;
+    min-width: 200px;
+  }
+  .corner-ribbon:hover { background: #5a9226; }
+  .corner-ribbon-inner { line-height: 1.15; }
+  .corner-ribbon-line1 { font-weight: bold; font-size: 13px; letter-spacing: 0.02em; }
+  .corner-ribbon-line2 { font-size: 11px; opacity: 0.95; margin-top: 2px; }
+  @media (max-width: 768px) {
+    .corner-ribbon { top: 16px; right: -50px; padding: 7px 55px; min-width: 170px; }
+    .corner-ribbon-line1 { font-size: 11px; }
+    .corner-ribbon-line2 { font-size: 9.5px; }
+  }
+  @media print { .corner-ribbon { display: none; } }
   details.job-card > summary { list-style: none; cursor: pointer; }
   details.job-card > summary::-webkit-details-marker { display: none; }
   details.job-card .chevron { transition: transform .3s ease; }
@@ -51,6 +71,14 @@ tailwind.config = { darkMode: "class", theme: { extend: {
 </head>
 <body class="bg-background text-on-surface">
 
+<!-- ÖFFNUNGSZEITEN-SCHLEIFE (Corner-Ribbon) -->
+<a href="index.html#kontakt" data-cms-ribbon class="corner-ribbon" aria-label="Öffnungszeiten">
+  <div class="corner-ribbon-inner">
+    <div class="corner-ribbon-line1" data-ribbon-saison></div>
+    <div class="corner-ribbon-line2" data-ribbon-hinweis></div>
+  </div>
+</a>
+
 <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm">
   <div class="flex justify-between items-center px-6 py-3 md:px-12 max-w-full mx-auto">
     <a href="index.html" class="flex items-center" aria-label="mplant, Startseite">
@@ -59,8 +87,8 @@ tailwind.config = { darkMode: "class", theme: { extend: {
     <div class="hidden md:flex items-center gap-8 text-sm font-bold text-on-surface-variant">
       <a href="index.html#pflanzenhof" class="hover:text-brand-green transition-colors">Pflanzenhof</a>
       <a href="index.html#galabau" class="hover:text-brand-green transition-colors">Garten &amp; Landschaft</a>
+      <a href="aktuelles.html" class="hover:text-brand-green transition-colors">Aktuelles</a>
       <a href="index.html#galerie" class="hover:text-brand-green transition-colors">Referenzen</a>
-      <a href="index.html#stimmen" class="hover:text-brand-green transition-colors">Stimmen</a>
       <a href="index.html#kontakt" class="hover:text-brand-green transition-colors">Kontakt</a>
       <a href="karriere.html" class="text-brand-green font-bold">Karriere</a>
     </div>
@@ -164,6 +192,7 @@ tailwind.config = { darkMode: "class", theme: { extend: {
       <div class="font-bold mb-1 uppercase tracking-wider text-xs text-brand-green">Mehr von uns</div>
       <a data-cms-instagram-href target="_blank" rel="noopener" class="opacity-80 hover:opacity-100 hover:text-brand-green transition-all inline-flex items-center gap-2"><span class="material-symbols-outlined text-base">photo_camera</span> Instagram</a>
       <a href="index.html#kontakt" class="opacity-80 hover:opacity-100 hover:text-brand-green transition-colors">Kontakt</a>
+      <a href="aktuelles.html" class="opacity-80 hover:opacity-100 hover:text-brand-green transition-colors">Aktuelles</a>
       <a href="karriere.html" class="opacity-80 hover:opacity-100 hover:text-brand-green transition-colors">Karriere</a>
       <a href="#" class="opacity-80 hover:opacity-100 hover:text-brand-green transition-colors">Datenschutz</a>
       <a href="#" class="opacity-80 hover:opacity-100 hover:text-brand-green transition-colors">Impressum</a>

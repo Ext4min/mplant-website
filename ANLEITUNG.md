@@ -124,3 +124,28 @@ Die eingeladenen Personen bekommen eine E-Mail mit Bestätigungs-Link, richten e
 - **Admin-Bereich nicht erreichbar?** Prüfen Sie, ob in Netlify unter Identity „Git Gateway" wirklich aktiviert ist.
 - **Änderung erscheint nicht auf der Website?** Warten Sie 1-2 Minuten und laden Sie die Seite neu (Strg+Umschalt+R oder Cmd+Umschalt+R).
 - **Bilder zu groß beim Hochladen?** Verkleinern Sie sie vor dem Hochladen auf max. 2000px Breite.
+
+---
+
+## Neue Änderungen in diesem Update
+
+- ✅ **Öffnungszeiten-Schleife** oben rechts (immer sichtbar, auf allen Seiten). Text pflegbar über CMS unter "Öffnungszeiten-Schleife".
+- ✅ **"Zwei Standbeine, ein Team"-Überschrift** entfernt (nur der Beschreibungstext bleibt).
+- ✅ **Vorher/Nachher-Slider** mit Ihrem echten Referenzbild bestückt (Verjüngung).
+- ✅ **Neuer Button** "Aktuelle Pflanzen im Hof" zwischen Karriere-Banner und Sortiment.
+- ✅ **Neue eigene Seite** `aktuelles.html` im Stil der Karriere-Seite. Mitarbeiter können dort beliebig viele Kacheln anlegen mit Bild, Titel und Beschreibung. Ideal für saisonale Angebote, frisch eingetroffene Ware oder Aktionen.
+
+### Wo pflegen die Mitarbeiter das im CMS?
+
+- **Öffnungszeiten-Schleife**: Startseite → "Öffnungszeiten-Schleife"
+- **Aktuelles-Button auf Startseite**: Startseite → "Aktuelles-Button"
+- **Aktuelles im Hof (Seite)**: Eigene Kategorie ganz unten → "Aktuelles im Hof (eigene Seite)"
+
+### Wie fügen Mitarbeiter eine neue "Aktuelles"-Kachel hinzu?
+
+1. Im Admin auf **"Aktuelles im Hof (eigene Seite)"** klicken
+2. Unter **Kacheln** auf **Add** klicken
+3. Bild hochladen, Titel und Beschreibungstext eintragen
+4. Oben rechts auf **Save** klicken
+5. Nach ca. 30 Sekunden ist die neue Kachel auf `aktuelles.html` live
+
