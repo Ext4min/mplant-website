@@ -250,26 +250,27 @@
 
     const vorherBild = container.querySelector('[data-slider-vorher-bild]');
     const nachherBild = container.querySelector('[data-slider-nachher-bild]');
+    const nachherClip = container.querySelector('[data-slider-nachher-clip]');
     const vorherLabel = container.querySelector('[data-slider-vorher-label]');
     const nachherLabel = container.querySelector('[data-slider-nachher-label]');
 
-    if (vorherBild && s.vorher_bild) vorherBild.style.backgroundImage = 'url(' + s.vorher_bild + ')';
-    if (nachherBild && s.nachher_bild) nachherBild.style.backgroundImage = 'url(' + s.nachher_bild + ')';
+    if (vorherBild && s.vorher_bild) vorherBild.setAttribute('src', s.vorher_bild);
+    if (nachherBild && s.nachher_bild) nachherBild.setAttribute('src', s.nachher_bild);
     if (vorherLabel) vorherLabel.textContent = s.vorher_label || 'Vorher';
     if (nachherLabel) nachherLabel.textContent = s.nachher_label || 'Nachher';
 
-    // Slider-Logik initialisieren
     const slider = container.querySelector('[data-slider-handle]');
-    const nachherWrapper = container.querySelector('[data-slider-nachher-wrapper]');
-    if (!slider || !nachherWrapper) return;
+    const frame = container.querySelector('[data-slider-frame]');
+    if (!slider || !nachherClip || !frame) return;
 
     let isDragging = false;
     const updatePosition = (clientX) => {
-      const rect = container.querySelector('[data-slider-frame]').getBoundingClientRect();
+      const rect = frame.getBoundingClientRect();
       let x = clientX - rect.left;
       x = Math.max(0, Math.min(x, rect.width));
       const percent = (x / rect.width) * 100;
-      nachherWrapper.style.clipPath = 'inset(0 0 0 ' + percent + '%)';
+      nachherClip.style.clipPath = 'inset(0 0 0 ' + percent + '%)';
+      nachherClip.style.webkitClipPath = 'inset(0 0 0 ' + percent + '%)';
       slider.style.left = percent + '%';
     };
 
@@ -282,14 +283,11 @@
       if (isDragging && e.touches[0]) updatePosition(e.touches[0].clientX);
     }, { passive: true });
 
-    // Klick auf den Rahmen setzt den Slider dorthin
-    const frame = container.querySelector('[data-slider-frame]');
     frame.addEventListener('click', (e) => {
       if (e.target === slider || slider.contains(e.target)) return;
       updatePosition(e.clientX);
     });
 
-    // Initial auf 50%
     setTimeout(() => {
       const rect = frame.getBoundingClientRect();
       updatePosition(rect.left + rect.width / 2);
