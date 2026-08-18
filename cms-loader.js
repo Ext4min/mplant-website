@@ -94,6 +94,9 @@
     document.querySelectorAll('[data-cms-mapslink]').forEach(el => {
       el.setAttribute('href', 'https://www.google.com/maps/search/?api=1&query=' + fullQuery);
     });
+    document.querySelectorAll('[data-cms-directions]').forEach(el => {
+      el.setAttribute('href', 'https://www.google.com/maps/dir/?api=1&destination=' + fullQuery + '&travelmode=driving');
+    });
   }
 
   // ---- Aktuell im Hof: dezenter Streifen ----
@@ -177,6 +180,8 @@
     if (k1bg && s.kachel1 && s.kachel1.bild) k1bg.setAttribute('src', s.kachel1.bild);
     const k4img = document.querySelector('[data-cms-sortiment-kachel4-img]');
     if (k4img && s.kachel4 && s.kachel4.bild) k4img.setAttribute('src', s.kachel4.bild);
+    const k5img = document.querySelector('[data-cms-sortiment-kachel5-img]');
+    if (k5img && s.kachel5 && s.kachel5.bild) k5img.setAttribute('src', s.kachel5.bild);
   }
 
   // ---- GaLaBau: 6 Leistungs-Kacheln + waagerechter Zeitstrahl ----

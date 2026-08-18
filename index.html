@@ -105,6 +105,10 @@ tailwind.config = { darkMode: "class", theme: { extend: {
       <div class="flex flex-wrap gap-4">
         <a href="#pflanzenhof" class="cta-gradient text-on-primary px-6 md:px-8 py-3 md:py-4 rounded-full text-base md:text-lg font-bold shadow-xl hover:scale-[1.02] transition-transform">Unser Hof</a>
         <a href="#galabau" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-6 md:px-8 py-3 md:py-4 rounded-full text-base md:text-lg font-bold hover:bg-white/20 transition-all">Unsere Gartenarbeit</a>
+        <a data-cms-directions target="_blank" rel="noopener" class="bg-white text-brand-dark px-6 md:px-8 py-3 md:py-4 rounded-full text-base md:text-lg font-bold shadow-xl hover:scale-[1.02] transition-transform inline-flex items-center gap-2">
+          <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">directions</span>
+          Hin zu uns
+        </a>
       </div>
     </div>
   </div>
@@ -224,6 +228,10 @@ tailwind.config = { darkMode: "class", theme: { extend: {
         <div class="flex-1 h-64 md:h-auto overflow-hidden">
           <img data-cms-sortiment-kachel4-img src="" alt="Dekoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
         </div>
+      </div>
+      <!-- Kachel 5: Reines Bild (füllt Lücke neben Dekoladen) -->
+      <div class="md:col-span-4 rounded-xl overflow-hidden shadow-sm relative min-h-[280px] group hidden md:block">
+        <img data-cms-sortiment-kachel5-img src="" alt="Eindruck vom Hof" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
       </div>
       <!-- Kachel 6: Erde (dunkel, breit) -->
       <div class="md:col-span-12 bg-brand-dark text-white rounded-xl p-10 shadow-sm">
