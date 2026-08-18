@@ -4,19 +4,19 @@
   "instagram_link_text": "Mehr auf Instagram",
   "bilder": [
     {
-      "bild": "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1600&q=80",
+      "bild": "/images/uploads/image00102.jpeg",
       "titel": "Gestalteter Garten"
     },
     {
-      "bild": "/images/uploads/image00102.jpeg",
+      "bild": "/images/uploads/image00034.jpeg",
       "titel": "Dekoration im Laden"
     },
     {
-      "bild": "/images/uploads/image00048.jpeg",
+      "bild": "/images/uploads/image00011.jpeg",
       "titel": "Blumen"
     },
     {
-      "bild": "/images/uploads/image00074.jpeg",
+      "bild": "/images/uploads/image00048.jpeg",
       "titel": "Pflanzenhof"
     }
   ]
