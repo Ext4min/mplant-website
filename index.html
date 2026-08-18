@@ -122,8 +122,8 @@ tailwind.config = { darkMode: "class", theme: { extend: {
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <a href="#pflanzenhof" class="group relative rounded-xl overflow-hidden shadow-lg min-h-[340px] flex items-end p-10 bg-brand-dark text-white hover:shadow-2xl transition-shadow">
-        <img data-cms="saeulen.pflanzenhof_kachel.bild" src="" alt="Pflanzenhof" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-80 transition-opacity">
-        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-brand-dark/20 pointer-events-none"></div>
+        <img data-cms="saeulen.pflanzenhof_kachel.bild" src="" alt="Pflanzenhof" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+        <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-brand-dark via-brand-dark/85 to-transparent pointer-events-none"></div>
         <div class="relative z-10 max-w-md">
           <span class="material-symbols-outlined text-4xl mb-4 text-brand-green">storefront</span>
           <h3 data-cms="saeulen.pflanzenhof_kachel.titel" class="text-3xl font-bold mb-3 tracking-tight"></h3>
@@ -131,14 +131,14 @@ tailwind.config = { darkMode: "class", theme: { extend: {
           <span class="font-bold inline-flex items-center gap-2 border-b-2 border-brand-green pb-0.5 group-hover:border-white transition-colors"><span data-cms="saeulen.pflanzenhof_kachel.link_text"></span> <span class="material-symbols-outlined text-base">arrow_forward</span></span>
         </div>
       </a>
-      <a href="#galabau" class="group relative rounded-xl overflow-hidden shadow-lg min-h-[340px] flex items-end p-10 bg-surface-container-highest hover:shadow-2xl transition-shadow">
-        <img data-cms="saeulen.garten_kachel.bild" src="" alt="Garten" class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity">
-        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest via-surface-container-highest/85 to-transparent"></div>
+      <a href="#galabau" class="group relative rounded-xl overflow-hidden shadow-lg min-h-[340px] flex items-end p-10 bg-brand-dark text-white hover:shadow-2xl transition-shadow">
+        <img data-cms="saeulen.garten_kachel.bild" src="" alt="Garten" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+        <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-brand-dark via-brand-dark/85 to-transparent pointer-events-none"></div>
         <div class="relative z-10 max-w-md">
           <span class="material-symbols-outlined text-4xl mb-4 text-brand-green">yard</span>
-          <h3 data-cms="saeulen.garten_kachel.titel" class="text-3xl font-bold mb-3 tracking-tight text-brand-dark"></h3>
-          <p data-cms="saeulen.garten_kachel.text" class="text-on-surface-variant mb-4"></p>
-          <span class="font-bold text-brand-green inline-flex items-center gap-2 border-b-2 border-brand-green/40 pb-0.5 group-hover:border-brand-green transition-colors"><span data-cms="saeulen.garten_kachel.link_text"></span> <span class="material-symbols-outlined text-base">arrow_forward</span></span>
+          <h3 data-cms="saeulen.garten_kachel.titel" class="text-3xl font-bold mb-3 tracking-tight text-white"></h3>
+          <p data-cms="saeulen.garten_kachel.text" class="opacity-90 mb-4"></p>
+          <span class="font-bold text-brand-green inline-flex items-center gap-2 border-b-2 border-brand-green pb-0.5 group-hover:border-white transition-colors"><span data-cms="saeulen.garten_kachel.link_text"></span> <span class="material-symbols-outlined text-base">arrow_forward</span></span>
         </div>
       </a>
     </div>
@@ -189,19 +189,24 @@ tailwind.config = { darkMode: "class", theme: { extend: {
       <h2 data-cms="sortiment.haupt_ueberschrift" class="text-brand-dark text-4xl md:text-5xl font-bold tracking-tight mt-2"></h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-auto">
-      <div class="md:col-span-8 md:row-span-2 bg-surface-container-lowest rounded-xl p-10 flex flex-col justify-between group overflow-hidden relative border border-outline-variant/15 shadow-sm min-h-[360px]">
-        <div class="relative z-10 max-w-md">
+      <!-- Kachel 1: Bäume - Split Layout (Text links, Bild rechts) -->
+      <div class="md:col-span-8 md:row-span-2 bg-surface-container-lowest rounded-xl overflow-hidden flex flex-col md:flex-row border border-outline-variant/15 shadow-sm min-h-[360px] group">
+        <div class="p-8 md:p-10 flex-1 flex flex-col justify-center">
           <span class="material-symbols-outlined text-4xl text-brand-green mb-6">forest</span>
-          <h3 data-cms="sortiment.kachel1.titel" class="text-3xl font-bold text-brand-dark mb-4"></h3>
-          <p data-cms="sortiment.kachel1.text" class="text-on-surface-variant text-lg"></p>
+          <h3 data-cms="sortiment.kachel1.titel" class="text-2xl md:text-3xl font-bold text-brand-dark mb-4"></h3>
+          <p data-cms="sortiment.kachel1.text" class="text-on-surface-variant text-base md:text-lg"></p>
         </div>
-        <img data-cms-sortiment-kachel1-bg src="" alt="" class="absolute right-0 bottom-0 w-1/2 h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+        <div class="flex-1 min-h-[240px] md:min-h-full overflow-hidden">
+          <img data-cms-sortiment-kachel1-bg src="" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
       </div>
+      <!-- Kachel 2: Rosen (grün) -->
       <div class="md:col-span-4 bg-brand-green text-on-primary rounded-xl p-10 flex flex-col justify-end shadow-xl min-h-[260px]">
         <span class="material-symbols-outlined text-4xl mb-6">filter_vintage</span>
         <h3 data-cms="sortiment.kachel2.titel" class="text-2xl font-bold mb-2"></h3>
         <p data-cms="sortiment.kachel2.text" class="opacity-90"></p>
       </div>
+      <!-- Kachel 3: Gestecke -->
       <div class="md:col-span-4 bg-surface-container-lowest rounded-xl p-10 flex flex-col justify-between border border-outline-variant/15 min-h-[260px]">
         <span class="material-symbols-outlined text-4xl text-tertiary mb-6">celebration</span>
         <div>
@@ -209,28 +214,22 @@ tailwind.config = { darkMode: "class", theme: { extend: {
           <p data-cms="sortiment.kachel3.text" class="text-on-surface-variant"></p>
         </div>
       </div>
-      <div class="md:col-span-8 bg-surface-container-highest rounded-xl overflow-hidden flex flex-col md:flex-row shadow-sm">
-        <div class="p-10 flex-1 flex flex-col justify-center">
+      <!-- Kachel 4: Dekoladen - Split Layout -->
+      <div class="md:col-span-8 bg-surface-container-highest rounded-xl overflow-hidden flex flex-col md:flex-row shadow-sm group">
+        <div class="p-8 md:p-10 flex-1 flex flex-col justify-center">
           <span class="material-symbols-outlined text-4xl text-brand-green mb-6">chair</span>
           <h3 data-cms="sortiment.kachel4.titel" class="text-2xl font-bold text-brand-dark mb-2"></h3>
           <p data-cms="sortiment.kachel4.text" class="text-on-surface-variant"></p>
         </div>
-        <div class="flex-1 h-64 md:h-auto">
-          <img data-cms-sortiment-kachel4-img src="" alt="Dekoration" class="w-full h-full object-cover">
+        <div class="flex-1 h-64 md:h-auto overflow-hidden">
+          <img data-cms-sortiment-kachel4-img src="" alt="Dekoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
         </div>
       </div>
-      <div class="md:col-span-4 bg-surface-container-lowest rounded-xl p-10 border border-outline-variant/15 shadow-sm">
-        <span class="material-symbols-outlined text-4xl text-brand-green mb-6">forum</span>
-        <h3 data-cms="sortiment.kachel5.titel" class="text-2xl font-bold text-brand-dark mb-2"></h3>
-        <p data-cms="sortiment.kachel5.text" class="text-on-surface-variant"></p>
-      </div>
-      <div class="md:col-span-4 bg-brand-dark text-white rounded-xl p-10 shadow-sm">
+      <!-- Kachel 6: Erde (dunkel, breit) -->
+      <div class="md:col-span-12 bg-brand-dark text-white rounded-xl p-10 shadow-sm">
         <span class="material-symbols-outlined text-4xl text-brand-green mb-6">compost</span>
         <h3 data-cms="sortiment.kachel6.titel" class="text-2xl font-bold mb-2"></h3>
-        <p data-cms="sortiment.kachel6.text" class="opacity-90"></p>
-      </div>
-      <div class="md:col-span-4 rounded-xl overflow-hidden shadow-sm relative min-h-[260px] group">
-        <img data-cms-sortiment-kachel7-img src="" alt="Eindruck vom Hof" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        <p data-cms="sortiment.kachel6.text" class="opacity-90 max-w-2xl"></p>
       </div>
     </div>
   </div>

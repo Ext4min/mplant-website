@@ -177,8 +177,6 @@
     if (k1bg && s.kachel1 && s.kachel1.bild) k1bg.setAttribute('src', s.kachel1.bild);
     const k4img = document.querySelector('[data-cms-sortiment-kachel4-img]');
     if (k4img && s.kachel4 && s.kachel4.bild) k4img.setAttribute('src', s.kachel4.bild);
-    const k7img = document.querySelector('[data-cms-sortiment-kachel7-img]');
-    if (k7img && s.kachel7 && s.kachel7.bild) k7img.setAttribute('src', s.kachel7.bild);
   }
 
   // ---- GaLaBau: 6 Leistungs-Kacheln + waagerechter Zeitstrahl ----

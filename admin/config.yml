@@ -160,23 +160,12 @@ collections:
               - { name: "titel", label: "Titel", widget: "string" }
               - { name: "text", label: "Text", widget: "text" }
               - { name: "bild", label: "Bild rechts", widget: "image" }
-          - label: "Kachel 5: Beratung"
-            name: "kachel5"
-            widget: "object"
-            fields:
-              - { name: "titel", label: "Titel", widget: "string" }
-              - { name: "text", label: "Text", widget: "text" }
           - label: "Kachel 6: Gute Erde & Zubehör (dunkel)"
             name: "kachel6"
             widget: "object"
             fields:
               - { name: "titel", label: "Titel", widget: "string" }
               - { name: "text", label: "Text", widget: "text" }
-          - label: "Kachel 7: Zusätzliches Bild (nur Foto)"
-            name: "kachel7"
-            widget: "object"
-            fields:
-              - { name: "bild", label: "Bild vom Hof (füllt die ganze Kachel)", widget: "image" }
 
       - name: "galabau"
         label: "Garten- und Landschaftsbau"
