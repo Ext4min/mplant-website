@@ -172,6 +172,11 @@ collections:
             fields:
               - { name: "titel", label: "Titel", widget: "string" }
               - { name: "text", label: "Text", widget: "text" }
+          - label: "Kachel 7: Zusätzliches Bild (nur Foto)"
+            name: "kachel7"
+            widget: "object"
+            fields:
+              - { name: "bild", label: "Bild vom Hof (füllt die ganze Kachel)", widget: "image" }
 
       - name: "galabau"
         label: "Garten- und Landschaftsbau"
@@ -219,18 +224,6 @@ collections:
                   - { name: "titel", label: "Titel", widget: "string" }
                   - { name: "text", label: "Beschreibung", widget: "text" }
 
-      - name: "slider"
-        label: "Vorher/Nachher Bilder-Slider"
-        file: "content/slider.json"
-        description: "Ein interaktives Vorher/Nachher-Bild im GaLaBau-Bereich. Ideal für Projekt-Referenzen: Zeigen Sie einen Garten vor der Umgestaltung und nach der Fertigstellung. Am besten zwei Bilder vom gleichen Standort im gleichen Winkel."
-        fields:
-          - { name: "ueberschrift", label: "Überschrift (grüne Schreibschrift)", widget: "string" }
-          - { name: "haupt_ueberschrift", label: "Haupt-Überschrift", widget: "string" }
-          - { name: "beschreibung", label: "Beschreibungstext", widget: "text" }
-          - { name: "vorher_bild", label: "Vorher-Bild", widget: "image" }
-          - { name: "vorher_label", label: "Vorher-Beschriftung", widget: "string", default: "Vorher" }
-          - { name: "nachher_bild", label: "Nachher-Bild", widget: "image" }
-          - { name: "nachher_label", label: "Nachher-Beschriftung", widget: "string", default: "Nachher" }
 
       - name: "galerie"
         label: "Galerie / Referenzen"

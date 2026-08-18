@@ -11,7 +11,7 @@
 
   const files = [
     'hero', 'aktuell', 'oeffnungszeiten_ribbon', 'aktuelles_teaser', 'aktuelles',
-    'saeulen', 'pflanzenhof', 'sortiment', 'galabau', 'slider', 'galerie',
+    'saeulen', 'pflanzenhof', 'sortiment', 'galabau', 'galerie',
     'karriere_teaser', 'kontakt', 'stimmen',
     'karriere_kopf', 'vorteile', 'stellen', 'bewerbung'
   ];
@@ -39,7 +39,6 @@
     applyKarriereTeaser(data);
     applySortiment(data);
     applyGalabau(data);
-    applySlider(data);
     applyGalerie(data);
     applyStimmen(data);
     applyVorteile(data);
@@ -178,6 +177,8 @@
     if (k1bg && s.kachel1 && s.kachel1.bild) k1bg.setAttribute('src', s.kachel1.bild);
     const k4img = document.querySelector('[data-cms-sortiment-kachel4-img]');
     if (k4img && s.kachel4 && s.kachel4.bild) k4img.setAttribute('src', s.kachel4.bild);
+    const k7img = document.querySelector('[data-cms-sortiment-kachel7-img]');
+    if (k7img && s.kachel7 && s.kachel7.bild) k7img.setAttribute('src', s.kachel7.bild);
   }
 
   // ---- GaLaBau: 6 Leistungs-Kacheln + waagerechter Zeitstrahl ----
@@ -240,58 +241,6 @@
       wrapper.appendChild(grid);
       timelineContainer.appendChild(wrapper);
     }
-  }
-
-  // ---- Vorher/Nachher-Slider ----
-  function applySlider(data) {
-    const container = document.querySelector('[data-cms-slider]');
-    if (!container) return;
-    const s = data.slider || {};
-
-    const vorherBild = container.querySelector('[data-slider-vorher-bild]');
-    const nachherBild = container.querySelector('[data-slider-nachher-bild]');
-    const nachherClip = container.querySelector('[data-slider-nachher-clip]');
-    const vorherLabel = container.querySelector('[data-slider-vorher-label]');
-    const nachherLabel = container.querySelector('[data-slider-nachher-label]');
-
-    if (vorherBild && s.vorher_bild) vorherBild.setAttribute('src', s.vorher_bild);
-    if (nachherBild && s.nachher_bild) nachherBild.setAttribute('src', s.nachher_bild);
-    if (vorherLabel) vorherLabel.textContent = s.vorher_label || 'Vorher';
-    if (nachherLabel) nachherLabel.textContent = s.nachher_label || 'Nachher';
-
-    const slider = container.querySelector('[data-slider-handle]');
-    const frame = container.querySelector('[data-slider-frame]');
-    if (!slider || !nachherClip || !frame) return;
-
-    let isDragging = false;
-    const updatePosition = (clientX) => {
-      const rect = frame.getBoundingClientRect();
-      let x = clientX - rect.left;
-      x = Math.max(0, Math.min(x, rect.width));
-      const percent = (x / rect.width) * 100;
-      nachherClip.style.clipPath = 'inset(0 0 0 ' + percent + '%)';
-      nachherClip.style.webkitClipPath = 'inset(0 0 0 ' + percent + '%)';
-      slider.style.left = percent + '%';
-    };
-
-    slider.addEventListener('mousedown', () => { isDragging = true; });
-    slider.addEventListener('touchstart', () => { isDragging = true; }, { passive: true });
-    document.addEventListener('mouseup', () => { isDragging = false; });
-    document.addEventListener('touchend', () => { isDragging = false; });
-    document.addEventListener('mousemove', (e) => { if (isDragging) updatePosition(e.clientX); });
-    document.addEventListener('touchmove', (e) => {
-      if (isDragging && e.touches[0]) updatePosition(e.touches[0].clientX);
-    }, { passive: true });
-
-    frame.addEventListener('click', (e) => {
-      if (e.target === slider || slider.contains(e.target)) return;
-      updatePosition(e.clientX);
-    });
-
-    setTimeout(() => {
-      const rect = frame.getBoundingClientRect();
-      updatePosition(rect.left + rect.width / 2);
-    }, 100);
   }
 
   function applyGalerie(data) {
