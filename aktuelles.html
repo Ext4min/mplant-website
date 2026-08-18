@@ -47,6 +47,50 @@ tailwind.config = { darkMode: "class", theme: { extend: {
   .smart-nav.nav-hidden {
     transform: translateY(-100%);
   }
+  /* Schwebender Route-Pin (unten rechts, immer sichtbar) */
+  .floating-pin {
+    position: fixed;
+    bottom: 24px; right: 24px;
+    z-index: 100;
+    background: linear-gradient(135deg, #6bac2e 0%, #5a9226 100%);
+    color: white;
+    border-radius: 999px;
+    padding: 14px 22px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 4px 12px rgba(107, 172, 46, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: floating-pin-pulse 2.5s ease-in-out infinite;
+  }
+  .floating-pin:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35), 0 6px 16px rgba(107, 172, 46, 0.55);
+    animation: none;
+  }
+  .floating-pin .material-symbols-outlined { font-size: 22px; }
+  @keyframes floating-pin-pulse {
+    0%, 100% { box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 4px 12px rgba(107, 172, 46, 0.4); }
+    50% { box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 4px 22px rgba(107, 172, 46, 0.7); }
+  }
+  /* Auf Handy: nur Kreis mit Pin, ohne Text */
+  @media (max-width: 640px) {
+    .floating-pin {
+      bottom: 16px; right: 16px;
+      padding: 0;
+      width: 56px; height: 56px;
+      justify-content: center;
+    }
+    .floating-pin .floating-pin-text { display: none; }
+    .floating-pin .material-symbols-outlined { font-size: 26px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .floating-pin { animation: none; }
+  }
+  @media print { .floating-pin { display: none; } }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .section-animate { opacity:1 !important; transform:none !important; transition:none !important; }
@@ -198,5 +242,12 @@ tailwind.config = { darkMode: "class", theme: { extend: {
     })();
 </script>
 <script src="cms-loader.js"></script>
+
+<!-- SCHWEBENDER ROUTE-PIN -->
+<a data-cms-directions target="_blank" rel="noopener" class="floating-pin" aria-label="Route zum Hof öffnen">
+  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">directions</span>
+  <span class="floating-pin-text">Hin zu uns</span>
+</a>
+
 </body>
 </html>
