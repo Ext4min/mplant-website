@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- version: 1787042646 -->
+<!-- version: 1787043200 -->
 <html class="light" lang="de">
 <head>
 <meta charset="utf-8">
@@ -53,24 +53,20 @@ tailwind.config = { darkMode: "class", theme: { extend: {
   .smart-nav.nav-hidden {
     transform: translateY(-100%);
   }
-  /* Willkommen-Kacheln: originaler sanfter Verlauf auf Desktop, staerker auf Handy */
+  /* Willkommen-Kacheln: KEIN Verlauf auf Desktop, nur auf Handy */
   .willkommen-overlay {
-    inset: auto 0 0 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: auto;
-    position: absolute;
-    height: 66.6667%;
-    background-image: linear-gradient(to top, #1d1d1b, rgba(29,29,27,0.85), transparent);
+    display: none;
   }
-  /* Auf Handy: dunkler und hoeher, damit Text ueberall gut lesbar ist */
+  /* Auf Handy: dunkler Verlauf, damit Text ueberall gut lesbar ist */
   @media (max-width: 767px) {
     .willkommen-overlay {
-      height: 100%;
+      display: block;
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
       background-image: linear-gradient(to top,
-        rgba(29,29,27,0.98) 0%,
-        rgba(29,29,27,0.92) 35%,
+        rgba(29,29,27,0.95) 0%,
+        rgba(29,29,27,0.88) 35%,
         rgba(29,29,27,0.55) 60%,
         rgba(29,29,27,0.15) 85%,
         transparent 100%);
@@ -574,7 +570,7 @@ tailwind.config = { darkMode: "class", theme: { extend: {
       }, { passive: true });
     })();
 </script>
-<script src="cms-loader.js?v=1787042646"></script>
+<script src="cms-loader.js?v=1787043200"></script>
 
 <!-- SCHWEBENDER ROUTE-PIN -->
 <a data-cms-directions target="_blank" rel="noopener" class="floating-pin" aria-label="Route zum Hof öffnen">
