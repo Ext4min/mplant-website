@@ -8,15 +8,15 @@
       "titel": "Gestalteter Garten"
     },
     {
-      "bild": "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?auto=format&fit=crop&w=800&q=80",
+      "bild": "/images/uploads/image00102.jpeg",
       "titel": "Dekoration im Laden"
     },
     {
-      "bild": "https://images.unsplash.com/photo-1526397751294-331021109fbd?auto=format&fit=crop&w=800&q=80",
-      "titel": "Rosen"
+      "bild": "/images/uploads/image00048.jpeg",
+      "titel": "Blumen"
     },
     {
-      "bild": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1600&q=80",
+      "bild": "/images/uploads/image00074.jpeg",
       "titel": "Pflanzenhof"
     }
   ]
