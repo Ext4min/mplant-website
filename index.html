@@ -52,6 +52,34 @@ tailwind.config = { darkMode: "class", theme: { extend: {
   .smart-nav.nav-hidden {
     transform: translateY(-100%);
   }
+  /* Willkommen-Kacheln: sanfter Verlauf auf Desktop, staerker auf Handy */
+  .willkommen-overlay {
+    background: linear-gradient(to top,
+      #1d1d1b 0%,
+      rgba(29,29,27,0.85) 45%,
+      transparent 100%);
+    height: 66%;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+  /* Auf Handy: dunkler und hoeher, damit Text ueberall gut lesbar ist */
+  @media (max-width: 767px) {
+    .willkommen-overlay {
+      height: 100%;
+      background: linear-gradient(to top,
+        rgba(29,29,27,0.98) 0%,
+        rgba(29,29,27,0.92) 35%,
+        rgba(29,29,27,0.55) 60%,
+        rgba(29,29,27,0.15) 85%,
+        transparent 100%);
+    }
+    .willkommen-content h3 { text-shadow: 0 1px 3px rgba(0,0,0,0.4); }
+    .willkommen-content p { text-shadow: 0 1px 2px rgba(0,0,0,0.3); }
+  }
+
   /* Schwebender Route-Pin (unten rechts, immer sichtbar) */
   .floating-pin {
     position: fixed;
@@ -165,23 +193,23 @@ tailwind.config = { darkMode: "class", theme: { extend: {
       <p data-cms="saeulen.beschreibung" class="text-on-surface-variant text-lg leading-relaxed"></p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <a href="#pflanzenhof" class="group relative rounded-xl overflow-hidden shadow-lg min-h-[340px] flex items-end p-10 bg-brand-dark text-white hover:shadow-2xl transition-shadow">
+      <a href="#pflanzenhof" class="group willkommen-tile relative rounded-xl overflow-hidden shadow-lg min-h-[340px] flex items-end p-8 md:p-10 bg-brand-dark text-white hover:shadow-2xl transition-shadow">
         <img data-cms="saeulen.pflanzenhof_kachel.bild" src="" alt="Pflanzenhof" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-        <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-brand-dark via-brand-dark/85 to-transparent pointer-events-none"></div>
-        <div class="relative z-10 max-w-md">
+        <div class="willkommen-overlay absolute inset-0 pointer-events-none"></div>
+        <div class="relative z-10 max-w-md willkommen-content">
           <span class="material-symbols-outlined text-4xl mb-4 text-brand-green">storefront</span>
-          <h3 data-cms="saeulen.pflanzenhof_kachel.titel" class="text-3xl font-bold mb-3 tracking-tight"></h3>
-          <p data-cms="saeulen.pflanzenhof_kachel.text" class="opacity-90 mb-4"></p>
+          <h3 data-cms="saeulen.pflanzenhof_kachel.titel" class="text-2xl md:text-3xl font-bold mb-3 tracking-tight"></h3>
+          <p data-cms="saeulen.pflanzenhof_kachel.text" class="opacity-95 mb-4 text-sm md:text-base"></p>
           <span class="font-bold inline-flex items-center gap-2 border-b-2 border-brand-green pb-0.5 group-hover:border-white transition-colors"><span data-cms="saeulen.pflanzenhof_kachel.link_text"></span> <span class="material-symbols-outlined text-base">arrow_forward</span></span>
         </div>
       </a>
-      <a href="#galabau" class="group relative rounded-xl overflow-hidden shadow-lg min-h-[340px] flex items-end p-10 bg-brand-dark text-white hover:shadow-2xl transition-shadow">
+      <a href="#galabau" class="group willkommen-tile relative rounded-xl overflow-hidden shadow-lg min-h-[340px] flex items-end p-8 md:p-10 bg-brand-dark text-white hover:shadow-2xl transition-shadow">
         <img data-cms="saeulen.garten_kachel.bild" src="" alt="Garten" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-        <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-brand-dark via-brand-dark/85 to-transparent pointer-events-none"></div>
-        <div class="relative z-10 max-w-md">
+        <div class="willkommen-overlay absolute inset-0 pointer-events-none"></div>
+        <div class="relative z-10 max-w-md willkommen-content">
           <span class="material-symbols-outlined text-4xl mb-4 text-brand-green">yard</span>
-          <h3 data-cms="saeulen.garten_kachel.titel" class="text-3xl font-bold mb-3 tracking-tight text-white"></h3>
-          <p data-cms="saeulen.garten_kachel.text" class="opacity-90 mb-4"></p>
+          <h3 data-cms="saeulen.garten_kachel.titel" class="text-2xl md:text-3xl font-bold mb-3 tracking-tight text-white"></h3>
+          <p data-cms="saeulen.garten_kachel.text" class="opacity-95 mb-4 text-sm md:text-base"></p>
           <span class="font-bold text-brand-green inline-flex items-center gap-2 border-b-2 border-brand-green pb-0.5 group-hover:border-white transition-colors"><span data-cms="saeulen.garten_kachel.link_text"></span> <span class="material-symbols-outlined text-base">arrow_forward</span></span>
         </div>
       </a>
@@ -288,18 +316,18 @@ tailwind.config = { darkMode: "class", theme: { extend: {
   <div class="max-w-7xl mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <div class="order-2 lg:order-1 relative">
-        <div class="grid grid-cols-2 gap-4">
-          <div class="space-y-4">
+        <div class="grid grid-cols-2 gap-3 md:gap-4">
+          <div class="space-y-3 md:space-y-4">
             <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
               <img data-cms="pflanzenhof.bild_oben_links" src="" alt="" class="w-full h-full object-cover">
             </div>
-            <div class="aspect-square rounded-2xl overflow-hidden shadow-lg bg-brand-green p-6 flex flex-col justify-center text-on-primary">
-              <span class="material-symbols-outlined text-4xl mb-4">schedule</span>
-              <h4 data-cms="pflanzenhof.bild_unten_links_titel" class="font-bold text-xl mb-2"></h4>
-              <p data-cms="pflanzenhof.bild_unten_links_text" class="text-sm opacity-95"></p>
+            <div class="aspect-square rounded-2xl overflow-hidden shadow-lg bg-brand-green p-4 md:p-6 flex flex-col justify-center text-on-primary">
+              <span class="material-symbols-outlined text-3xl md:text-4xl mb-2 md:mb-4">schedule</span>
+              <h4 data-cms="pflanzenhof.bild_unten_links_titel" class="font-bold text-base md:text-xl mb-1 md:mb-2 leading-tight"></h4>
+              <p data-cms="pflanzenhof.bild_unten_links_text" class="text-xs md:text-sm opacity-95 leading-snug"></p>
             </div>
           </div>
-          <div class="space-y-4 pt-8">
+          <div class="space-y-3 md:space-y-4 md:pt-8">
             <div class="aspect-square rounded-2xl overflow-hidden shadow-lg">
               <img data-cms="pflanzenhof.bild_oben_rechts" src="" alt="" class="w-full h-full object-cover">
             </div>

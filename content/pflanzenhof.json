@@ -1,8 +1,12 @@
 {
-  "bild_unten_links_titel": "Saison hat Vorfahrt",
+  "ueberschrift": "Unser Hof in Brielow",
+  "haupt_ueberschrift": "Einfach mal vorbeischauen",
   "haupttext": "Direkt an der Seestraße in Brielow, ein paar Schritte vom Beetzsee entfernt, liegt unser Pflanzenhof. Bäume, Stauden, Blumen, und drinnen der kleine Dekoladen. Zwischen den Gängen durchzuschlendern macht einfach gute Laune. Und falls Sie sich nicht sicher sind, was zu Ihrem Garten passt, fragen Sie uns.",
+  "bild_oben_links": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80",
+  "bild_unten_links_titel": "Saison hat Vorfahrt",
   "bild_unten_links_text": "Was bei uns steht, wächst gerade. So einfach, und so gut.",
-  "bild_unten_rechts": "/images/uploads/image00002.jpeg",
+  "bild_oben_rechts": "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?auto=format&fit=crop&w=800&q=80",
+  "bild_unten_rechts": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=80",
   "punkte": {
     "p1": {
       "titel": "Beratung auf Augenhöhe",
@@ -16,9 +20,5 @@
       "titel": "Schönes für Drinnen & Draußen",
       "text": "Wir binden auch saisonale Gestecke, für Ostern, den Muttertag, die Adventszeit oder einfach für den Tisch."
     }
-  },
-  "bild_oben_links": "/images/uploads/image00075.jpeg",
-  "bild_oben_rechts": "/images/uploads/image00034.jpeg",
-  "haupt_ueberschrift": "Einfach mal vorbeischauen",
-  "ueberschrift": "Unser Hof in Brielow"
+  }
 }
