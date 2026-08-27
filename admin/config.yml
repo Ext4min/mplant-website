@@ -67,9 +67,9 @@ collections:
           - { name: "button_text", label: "Button-Text", widget: "string", default: "Offene Stellen" }
 
       - name: "saeulen"
-        label: "Die zwei Bereiche (Pflanzenhof & Garten)"
+        label: "Die drei Bereiche (Pflanzenhof, Garten, Über uns)"
         file: "content/saeulen.json"
-        description: "Die zwei großen Kacheln 'Unser Pflanzenhof' und 'Garten & Landschaft'."
+        description: "Die drei Kacheln unter dem Willkommen-Text."
         fields:
           - { name: "willkommen_ueberschrift", label: "Überschrift 'Willkommen' (grüne Schreibschrift)", widget: "string" }
           - { name: "haupt_ueberschrift", label: "Haupt-Überschrift", widget: "string" }
@@ -84,6 +84,14 @@ collections:
               - { name: "link_text", label: "Link-Text unten", widget: "string" }
           - label: "Kachel 'Garten & Landschaft'"
             name: "garten_kachel"
+            widget: "object"
+            fields:
+              - { name: "bild", label: "Bild", widget: "image" }
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Text", widget: "text" }
+              - { name: "link_text", label: "Link-Text unten", widget: "string" }
+          - label: "Kachel 'Über uns'"
+            name: "ueberuns_kachel"
             widget: "object"
             fields:
               - { name: "bild", label: "Bild", widget: "image" }
@@ -288,6 +296,26 @@ collections:
               - { name: "text", label: "Text", widget: "text" }
               - { name: "quelle", label: "Quelle", widget: "string" }
 
+      - name: "ueberuns"
+        label: "Über uns – Sektion am Ende"
+        file: "content/ueberuns.json"
+        description: "Zeitstrahl mit den Meilensteinen der Firma, zwischen Referenzen und Kontakt."
+        fields:
+          - { name: "ueberschrift", label: "Überschrift (grüne Schreibschrift)", widget: "string" }
+          - { name: "haupt_ueberschrift", label: "Haupt-Überschrift", widget: "string" }
+          - { name: "einleitung", label: "Einleitungstext", widget: "text" }
+          - label: "Meilensteine (3 bis 6)"
+            name: "meilensteine"
+            widget: "list"
+            min: 3
+            max: 6
+            summary: "{{fields.jahr}} - {{fields.titel}}"
+            fields:
+              - { name: "jahr", label: "Jahr (z.B. 2014 oder 'heute')", widget: "string" }
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Text", widget: "text" }
+          - { name: "abschluss", label: "Abschluss-Satz (kursiv)", widget: "text" }
+
   # ============================================================
   # KARRIERE-SEITE
   # ============================================================
@@ -416,3 +444,67 @@ collections:
               - { name: "titel", label: "Titel", widget: "string" }
               - { name: "text", label: "Beschreibungstext", widget: "text" }
           - { name: "abschluss_text", label: "Abschluss-Text (unten auf der Seite)", widget: "text" }
+  # ============================================================
+  # IMPRESSUM-SEITE
+  # ============================================================
+  - name: "impressum_seite"
+    label: "Impressum-Seite"
+    delete: false
+    editor:
+      preview: false
+    files:
+
+      - name: "impressum"
+        label: "Impressum"
+        file: "content/impressum.json"
+        description: "Rechtstext für impressum.html"
+        fields:
+          - label: "Kopfbereich"
+            name: "kopf"
+            widget: "object"
+            fields:
+              - { name: "ueberschrift", label: "Überschrift (grüne Schreibschrift)", widget: "string" }
+              - { name: "haupt_ueberschrift", label: "Haupt-Überschrift", widget: "string" }
+              - { name: "einleitung", label: "Einleitungstext", widget: "text" }
+          - label: "Angaben zum Unternehmen"
+            name: "block_angaben"
+            widget: "object"
+            fields:
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Text (mit Zeilenumbrüchen)", widget: "text" }
+          - label: "Kontakt"
+            name: "block_kontakt"
+            widget: "object"
+            fields:
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Text (mit Zeilenumbrüchen)", widget: "text" }
+          - label: "USt-ID"
+            name: "block_ustid"
+            widget: "object"
+            fields:
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Text", widget: "text" }
+          - label: "Berufsbezeichnung"
+            name: "block_beruf"
+            widget: "object"
+            fields:
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Text", widget: "text" }
+          - label: "Verantwortlich für den Inhalt"
+            name: "block_verantwortlich"
+            widget: "object"
+            fields:
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Text (mit Zeilenumbrüchen)", widget: "text" }
+          - label: "Haftungsausschluss"
+            name: "block_haftung"
+            widget: "object"
+            fields:
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Text", widget: "text" }
+          - label: "Urheberrecht"
+            name: "block_urheber"
+            widget: "object"
+            fields:
+              - { name: "titel", label: "Titel", widget: "string" }
+              - { name: "text", label: "Text", widget: "text" }
