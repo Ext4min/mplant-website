@@ -275,7 +275,11 @@ collections:
             name: "oeffnungszeiten"
             widget: "object"
             fields:
-              - { name: "mo_fr", label: "Montag bis Freitag", widget: "string" }
+              - { name: "montag", label: "Montag", widget: "string" }
+              - { name: "dienstag", label: "Dienstag", widget: "string" }
+              - { name: "mittwoch", label: "Mittwoch", widget: "string" }
+              - { name: "donnerstag", label: "Donnerstag", widget: "string" }
+              - { name: "freitag", label: "Freitag", widget: "string" }
               - { name: "samstag", label: "Samstag", widget: "string" }
               - { name: "sonntag", label: "Sonntag", widget: "string" }
               - { name: "hinweis", label: "Hinweis darunter", widget: "string" }
