@@ -1,7 +1,11 @@
 {
+  "ueberschrift": "Willkommen im Pflanzenhof",
+  "haupt_ueberschrift": "Inspiration und Qualität für Gartenliebhaber.",
+  "haupttext": "Bei uns finden Sie alles, was Ihren Garten zum Lieblingsort macht, von robusten Gehölzen über blühende Stauden bis zu stilvollen Accessoires. Lassen Sie sich inspirieren und entdecken Sie Pflanzenvielfalt, fachkundige Beratung und Service aus einer Hand.",
+  "bild_oben_links": "/images/uploads/image00002.jpeg",
   "bild_unten_links_titel": "Saison hat Vorfahrt",
-  "haupttext": "Direkt an der Seestraße in Brielow, ein paar Schritte vom Beetzsee entfernt, liegt unser Pflanzenhof. Bäume, Stauden, Blumen, und drinnen der kleine Dekoladen. Zwischen den Gängen durchzuschlendern macht einfach gute Laune. Und falls Sie sich nicht sicher sind, was zu Ihrem Garten passt, fragen Sie uns.",
   "bild_unten_links_text": "Was bei uns steht, wächst gerade. So einfach, und so gut.",
+  "bild_oben_rechts": "/images/uploads/image00053.jpeg",
   "bild_unten_rechts": "/images/uploads/image00075.jpeg",
   "punkte": {
     "p1": {
@@ -16,9 +20,5 @@
       "titel": "Schönes für Drinnen & Draußen",
       "text": "Wir binden auch saisonale Gestecke, für Ostern, den Muttertag, die Adventszeit oder einfach für den Tisch."
     }
-  },
-  "bild_oben_links": "/images/uploads/image00002.jpeg",
-  "bild_oben_rechts": "/images/uploads/image00053.jpeg",
-  "haupt_ueberschrift": "Einfach mal vorbeischauen",
-  "ueberschrift": "Unser Hof in Brielow"
+  }
 }

@@ -1,34 +1,36 @@
 {
+  "ueberschrift": "Unser Angebot",
+  "haupt_ueberschrift": "Alles, was Ihren Garten zum Lieblingsort macht.",
   "kachel1": {
-    "titel": "Bäume, Sträucher & Stauden",
-    "text": "Vom Hausbaum bis zur kleinen Bodendeckerin, wir ziehen und führen, was in unseren Boden passt. Gesunde, gut verwurzelte Pflanzen, die anwachsen und bleiben.",
+    "titel": "Bäume",
+    "text": "Von Ziergehölzen bis zu imposanten Solitärbäumen. Wir bieten eine große Auswahl an Arten und Größen für jeden Standort.",
     "bild": "/images/uploads/image00012.jpeg"
   },
   "kachel2": {
-    "titel": "Rosen & Blühendes",
-    "text": "Rosen, die wirklich anwachsen. Und dazu alles, was den Sommer lang blüht."
+    "titel": "Sträucher & Heckenpflanzen",
+    "text": "Ob blühend, immergrün oder als Sichtschutz. Unsere Sträucher und Hecken bringen Struktur und Charakter in Ihren Garten."
   },
   "kachel3": {
-    "titel": "Saisonale Gestecke",
-    "text": "Ostern, Muttertag, Advent. Wir binden, was zur Jahreszeit passt. Auf Wunsch auch ganz nach Ihrer Idee."
+    "titel": "Stauden",
+    "text": "Vielfältig, pflegeleicht und farbenfroh: Stauden setzen Akzente und sorgen das ganze Jahr über für lebendige Gartenbilder."
   },
   "kachel4": {
-    "titel": "Dekoladen",
-    "text": "Ein kleiner Laden mit liebevoll ausgesuchten Dingen für drinnen und draußen. Zum Verschenken oder Selberbehalten.",
+    "titel": "Beet- & Balkonpflanzen",
+    "text": "Für jede Saison die passende Blütenpracht. Gestalten Sie Beete, Kübel und Balkonkästen mit frischen, farbenfrohen Pflanzen.",
     "bild": "/images/uploads/image00090.jpeg"
   },
   "kachel5": {
-    "titel": "Beratung, die weiterhilft",
-    "text": "Wir kennen unsere Pflanzen. Und wir kennen den Boden hier. Sagen Sie uns, was Sie vorhaben, und wir sagen Ihnen ehrlich, was funktioniert.",
+    "titel": "Erden & Substrate",
+    "text": "Hochwertige Erden und Substrate bilden die Basis für gesundes Pflanzenwachstum, abgestimmt auf die jeweiligen Anforderungen Ihrer Pflanzen.",
     "bild": "/images/uploads/image00150.png"
   },
   "kachel6": {
-    "titel": "Gute Erde & Zubehör",
-    "text": "Substrat, Dünger, Übertöpfe. Die Basics, damit aus einer neuen Pflanze eine alte wird."
+    "titel": "Pflanzgefäße",
+    "text": "Von klassisch bis modern: Entdecken Sie unsere Auswahl an stilvollen Pflanzgefäßen für Garten, Terrasse und Balkon."
   },
   "kachel7": {
+    "titel": "Wohnaccessoires",
+    "text": "Bringen Sie natürliche Atmosphäre auch in Ihr Zuhause, mit liebevoll ausgewählten Dekorations- und Wohnaccessoires aus unserem Sortiment.",
     "bild": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=80"
-  },
-  "haupt_ueberschrift": "Was Sie bei uns finden",
-  "ueberschrift": "Auf unserem Hof"
+  }
 }
