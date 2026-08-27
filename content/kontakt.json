@@ -13,8 +13,12 @@
   "email": "gartengestaltung@mplant-brielow.de",
   "instagram": "mplant_brielow",
   "oeffnungszeiten": {
-    "mo_fr": "9:00 bis 18:00",
-    "samstag": "9:00 bis 14:00",
+    "montag": "geschlossen",
+    "dienstag": "geschlossen",
+    "mittwoch": "geschlossen",
+    "donnerstag": "11:00 bis 18:00",
+    "freitag": "11:00 bis 18:00",
+    "samstag": "10:00 bis 13:00",
     "sonntag": "geschlossen",
     "hinweis": "Saisonzeiten können variieren. Rufen Sie im Zweifel kurz an."
   }
