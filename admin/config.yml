@@ -259,6 +259,8 @@ collections:
               - { name: "plz_ort", label: "PLZ und Ort", widget: "string" }
           - { name: "telefon", label: "Telefonnummer (Anzeige)", widget: "string" }
           - { name: "telefon_zum_anrufen", label: "Telefonnummer für Anruf-Link", widget: "string", hint: "Format: +491701234567" }
+          - { name: "mobil", label: "Mobilnummer (Anzeige)", widget: "string", required: false }
+          - { name: "mobil_zum_anrufen", label: "Mobilnummer für Anruf-Link", widget: "string", required: false, hint: "Format: +491701234567" }
           - { name: "email", label: "E-Mail-Adresse", widget: "string" }
           - { name: "instagram", label: "Instagram-Nutzername (ohne @)", widget: "string" }
           - label: "Öffnungszeiten"
