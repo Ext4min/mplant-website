@@ -197,10 +197,10 @@
       container.innerHTML = '';
       g.leistungen.forEach(l => {
         const card = document.createElement('div');
-        card.className = 'bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-colors';
+        card.className = 'bg-white/5 backdrop-blur-sm border border-white/10 p-6 lg:p-7 rounded-xl hover:bg-white/10 transition-colors';
         card.innerHTML =
-          '<span class="material-symbols-outlined text-4xl mb-5 text-brand-green leistung-icon"></span>' +
-          '<h3 class="text-xl font-bold mb-3 leistung-titel"></h3>' +
+          '<span class="material-symbols-outlined text-4xl mb-4 text-brand-green leistung-icon"></span>' +
+          '<h3 class="text-lg lg:text-xl font-bold mb-2 leistung-titel"></h3>' +
           '<p class="opacity-80 text-sm leading-relaxed leistung-text"></p>';
         card.querySelector('.leistung-icon').textContent = l.icon || 'yard';
         card.querySelector('.leistung-titel').textContent = l.titel || '';
