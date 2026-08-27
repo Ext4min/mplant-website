@@ -12,7 +12,7 @@
   const files = [
     'hero', 'aktuell', 'oeffnungszeiten_ribbon', 'aktuelles_teaser', 'aktuelles',
     'saeulen', 'pflanzenhof', 'sortiment', 'galabau', 'galerie',
-    'karriere_teaser', 'kontakt', 'stimmen',
+    'karriere_teaser', 'kontakt', 'stimmen', 'ueberuns', 'impressum',
     'karriere_kopf', 'vorteile', 'stellen', 'bewerbung'
   ];
 
@@ -40,6 +40,7 @@
     applySortiment(data);
     applyGalabau(data);
     applyGalerie(data);
+    applyUeberuns(data);
     applyStimmen(data);
     applyVorteile(data);
     applyStellen(data);
@@ -244,6 +245,49 @@
       wrapper.appendChild(grid);
       timelineContainer.appendChild(wrapper);
     }
+  }
+
+  function applyUeberuns(data) {
+    const u = data.ueberuns;
+    if (!u) return;
+    const container = document.querySelector('[data-cms-ueberuns-timeline]');
+    if (!container || !u.meilensteine) return;
+
+    container.innerHTML = '';
+    const wrapper = document.createElement('div');
+    wrapper.className = 'relative';
+
+    // Waagerechte Verbindungslinie (nur Desktop)
+    const anzahl = u.meilensteine.length;
+    const line = document.createElement('div');
+    line.className = 'hidden md:block absolute top-8 h-0.5 bg-gradient-to-r from-brand-green/30 via-brand-green to-brand-green/30 pointer-events-none';
+    line.style.left = '12.5%';
+    line.style.right = '12.5%';
+    wrapper.appendChild(line);
+
+    // Grid mit dynamischer Spaltenzahl
+    const grid = document.createElement('div');
+    let colClass = 'md:grid-cols-4';
+    if (anzahl === 3) colClass = 'md:grid-cols-3';
+    else if (anzahl === 5) colClass = 'md:grid-cols-5';
+    else if (anzahl === 6) colClass = 'md:grid-cols-6';
+    grid.className = 'relative grid grid-cols-1 ' + colClass + ' gap-8 md:gap-4';
+
+    u.meilensteine.forEach(m => {
+      const step = document.createElement('div');
+      step.className = 'flex flex-col items-center text-center relative';
+      step.innerHTML =
+        '<div class="w-16 h-16 rounded-full bg-brand-green text-white flex items-center justify-center font-bold text-base shadow-lg ring-4 ring-brand-dark relative z-10 milestone-jahr"></div>' +
+        '<h4 class="font-bold mt-5 mb-2 text-lg milestone-titel"></h4>' +
+        '<p class="text-sm opacity-80 max-w-[240px] milestone-text"></p>';
+      step.querySelector('.milestone-jahr').textContent = m.jahr || '';
+      step.querySelector('.milestone-titel').textContent = m.titel || '';
+      step.querySelector('.milestone-text').textContent = m.text || '';
+      grid.appendChild(step);
+    });
+
+    wrapper.appendChild(grid);
+    container.appendChild(wrapper);
   }
 
   function applyGalerie(data) {
