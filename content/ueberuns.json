@@ -1,0 +1,28 @@
+{
+  "ueberschrift": "Über uns",
+  "haupt_ueberschrift": "Unsere Geschichte",
+  "einleitung": "Kreative und fachgerechte Gartengestaltung, seit über zehn Jahren.",
+  "meilensteine": [
+    {
+      "jahr": "2014",
+      "titel": "Gegründet",
+      "text": "Aus Leidenschaft für Pflanzen und Gärten entsteht mplant."
+    },
+    {
+      "jahr": "2018",
+      "titel": "Pflanzenhof",
+      "text": "Mit dem eigenen Pflanzenhof werden wir zum festen Anlaufpunkt für Gartenfreunde in der Region."
+    },
+    {
+      "jahr": "2019",
+      "titel": "Ausbildung",
+      "text": "Anerkannt als Ausbildungsstätte für Gärtnerinnen und Gärtner der Fachrichtung Garten- und Landschaftsbau."
+    },
+    {
+      "jahr": "heute",
+      "titel": "Weiter grün",
+      "text": "Nachhaltig geplant, mit Fachwissen umgesetzt und immer mit Blick auf den Menschen, der den Garten nutzt."
+    }
+  ],
+  "abschluss": "Ob Privatgarten, Außenanlage oder Firmengelände, wir gestalten Lebensräume im Einklang mit der Natur."
+}

@@ -1,0 +1,35 @@
+{
+  "kopf": {
+    "ueberschrift": "Rechtliches",
+    "haupt_ueberschrift": "Impressum",
+    "einleitung": "Angaben gemäß § 5 TMG."
+  },
+  "block_angaben": {
+    "titel": "Angaben zum Unternehmen",
+    "text": "mplant, Pflanzenhof & Gartengestaltung\nInhaber: Marko Nickel\nSeestraße 2\n14778 Beetzsee, OT Brielow"
+  },
+  "block_kontakt": {
+    "titel": "Kontakt",
+    "text": "Telefon: 03383 70209063\nMobil: 0170 4023929\nE-Mail: gartengestaltung@mplant-brielow.de\nInstagram: @mplant_brielow"
+  },
+  "block_ustid": {
+    "titel": "Umsatzsteuer-Identifikationsnummer",
+    "text": "DE359852897"
+  },
+  "block_beruf": {
+    "titel": "Berufsbezeichnung",
+    "text": "Gärtner, Fachrichtung Garten- und Landschaftsbau, verliehen in Deutschland."
+  },
+  "block_verantwortlich": {
+    "titel": "Verantwortlich für den Inhalt gemäß § 55 Abs. 2 RStV",
+    "text": "Marko Nickel\nTaubenstraße 3\n14778 Beetzsee, OT Brielow"
+  },
+  "block_haftung": {
+    "titel": "Haftungsausschluss",
+    "text": "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich."
+  },
+  "block_urheber": {
+    "titel": "Urheberrecht",
+    "text": "Alle Inhalte, Texte und Bilder dieser Website unterliegen dem Urheberrecht. Eine Verwendung ohne vorherige schriftliche Genehmigung ist nicht gestattet."
+  }
+}

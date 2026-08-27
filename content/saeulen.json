@@ -1,17 +1,23 @@
 {
   "willkommen_ueberschrift": "Willkommen",
-  "haupt_ueberschrift": "Grüne Lebensräume für den Menschen.",
-  "beschreibung": "Seit 2014 stehen wir für kreative und fachgerechte Gartengestaltung. 2018 kam unser eigener Pflanzenhof dazu, seit 2019 sind wir zudem anerkannte Ausbildungsstätte für Gärtnerinnen und Gärtner. Bei uns steht der Kunde im Mittelpunkt: Wir planen individuell, setzen Ideen mit Fachwissen und Leidenschaft um und schaffen langlebige Gärten, die ökologisch sinnvoll, pflegeleicht und natürlich schön sind.",
+  "haupt_ueberschrift": "Alles rund ums Grün.",
+  "beschreibung": "Seit 2014 sind wir Ihr regionaler Partner für alles rund ums Grün. Mit Leidenschaft, Erfahrung und einem Auge fürs Detail schaffen wir grüne Lebensräume, die zum Wohlfühlen einladen.",
   "pflanzenhof_kachel": {
     "bild": "/images/uploads/image00047.jpeg",
     "titel": "Unser Pflanzenhof",
-    "text": "Inspiration und Qualität für Gartenliebhaber. Von robusten Gehölzen über blühende Stauden bis zu stilvollen Accessoires. Fachkundige Beratung inklusive.",
+    "text": "Inspiration und Qualität für Gartenliebhaber. Von robusten Gehölzen über blühende Stauden bis zu stilvollen Accessoires.",
     "link_text": "Zum Sortiment"
   },
   "garten_kachel": {
     "bild": "/images/uploads/image00016.jpeg",
     "titel": "Gartengestaltung",
-    "text": "Wo Außenräume zu Wohnräumen werden. Von der Planung über die Neuanlage bis zur regelmäßigen Pflege, alles aus einer Hand.",
+    "text": "Wo Außenräume zu Wohnräumen werden. Von der Planung über die Neuanlage bis zur regelmäßigen Pflege.",
     "link_text": "Zu den Leistungen"
+  },
+  "ueberuns_kachel": {
+    "bild": "",
+    "titel": "Über uns",
+    "text": "Familienbetrieb aus Brielow. Seit 2014 gestalten wir Gärten, seit 2019 auch als anerkannte Ausbildungsstätte.",
+    "link_text": "Mehr erfahren"
   }
 }
