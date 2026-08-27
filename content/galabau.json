@@ -1,39 +1,49 @@
 {
-  "ueberschrift": "Garten- und Landschaftsbau",
-  "haupt_ueberschrift": "Planen. Pflanzen. Pflegen.",
-  "beschreibung": "Ob ein paar neue Beete, eine komplette Umgestaltung oder die Bewässerung für den Sommer: Wir planen, pflanzen, bauen und pflegen. Alles mit Leuten, die das Handwerk können, und mit Pflanzen von unserem eigenen Hof.",
+  "ueberschrift": "Gartengestaltung",
+  "haupt_ueberschrift": "Wo Außenräume zu Wohnräumen werden.",
+  "beschreibung": "Alles für Ihren Garten, aus einer Hand.",
   "button_text": "Projekt besprechen",
   "bild": "/images/uploads/image00063.jpeg",
   "leistungen": [
     {
-      "icon": "architecture",
-      "titel": "Gartengestaltung & Planung",
-      "text": "Wir kommen vorbei, schauen uns Ihr Grundstück an und entwerfen einen Garten, der zu Ihnen und zum Boden passt."
-    },
-    {
       "icon": "yard",
-      "titel": "Bepflanzung",
-      "text": "Vom Hausbaum über die Hecke bis zum Staudenbeet. Wir wählen die Pflanzen aus, pflanzen fachgerecht und sorgen dafür, dass alles anwächst."
+      "titel": "Neuanlagen",
+      "text": "Wir gestalten Ihren Garten von Grund auf neu, mit Kreativität, fachlichem Know-how und einem sicheren Gespür für Formen, Materialien und Pflanzen. So entsteht ein harmonisches Gesamtbild, das Ihren individuellen Stil widerspiegelt."
     },
     {
-      "icon": "water_drop",
-      "titel": "Bewässerung",
-      "text": "Automatische Bewässerungsanlagen und Tropfbewässerung, damit Ihr Garten auch im heißen Brandenburger Sommer grün bleibt."
-    },
-    {
-      "icon": "content_cut",
-      "titel": "Baum- & Heckenschnitt",
-      "text": "Regelmäßiger Formschnitt, Verjüngung alter Gehölze, Obstbaumschnitt. Fachgerecht und zur richtigen Jahreszeit."
+      "icon": "auto_awesome",
+      "titel": "Gartenrenovierung",
+      "text": "Wir bringen Ihren Garten wieder zum Strahlen, von der behutsamen Auffrischung bestehender Anlagen bis zur kompletten Neugestaltung."
     },
     {
       "icon": "grass",
-      "titel": "Rasen & Flächen",
-      "text": "Neuanlage als Saat oder Rollrasen, Vertikutieren, Nachsaat. Damit aus trister Fläche wieder eine grüne Wiese wird."
+      "titel": "Pflanzung",
+      "text": "Ob Blühstauden, Hecken, Bäume oder ganze Gartenbereiche. Wir wählen und pflanzen standortgerechte Gewächse, die Ihren Garten lebendig und dauerhaft schön gestalten."
     },
     {
-      "icon": "handyman",
-      "titel": "Pflege im Jahreslauf",
-      "text": "Regelmäßige Gartenpflege, Winterdienst, Herbstschnitt. Wir kommen wieder, so oft, wie Ihr Garten es braucht."
+      "icon": "water_drop",
+      "titel": "Bewässerungsanlagen",
+      "text": "Perfekt abgestimmte Systeme sorgen für eine effiziente, nachhaltige Bewässerung, damit Ihre Pflanzen gesund und kräftig gedeihen."
+    },
+    {
+      "icon": "landscape",
+      "titel": "Natursteinarbeiten",
+      "text": "Ob Wege, Mauern oder Terrassen: Mit Naturstein schaffen wir langlebige, stilvolle Akzente, die sich harmonisch in Ihren Garten einfügen."
+    },
+    {
+      "icon": "dashboard",
+      "titel": "Pflasterarbeiten",
+      "text": "Funktional und formschön: Wir gestalten Einfahrten, Wege und Terrassen mit hochwertigen Pflasterbelägen, präzise verlegt und langlebig ausgeführt."
+    },
+    {
+      "icon": "fence",
+      "titel": "Zaunbau",
+      "text": "Sichtschutz, Sicherheit oder einfach ein schöner Rahmen. Wir planen und realisieren Zäune, die zu Ihrem Garten und Haus passen."
+    },
+    {
+      "icon": "cabin",
+      "titel": "Holzbau",
+      "text": "Von Terrassen über Pergolen bis hin zu Gartenhäusern: Wir gestalten individuelle Holzbauwerke, die Natürlichkeit und Funktion perfekt verbinden."
     }
   ],
   "ablauf": {
