@@ -1,5 +1,5 @@
 {
-  "anzeigen": true,
+  "anzeigen": false,
   "ueberschrift": "Aktuelle Pflanzen im Hof",
   "text": "Was diese Woche bei uns eingetroffen ist, sehen Sie hier.",
   "button_text": "Aktuelles ansehen"
