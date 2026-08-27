@@ -1,25 +1,25 @@
 {
-  "ueberschrift": "Kontakt",
-  "haupt_ueberschrift": "Kommen Sie vorbei.",
   "intro_text": "Am besten einfach mal in Brielow reinschauen, oder kurz anrufen, falls Sie eine Frage haben oder etwas Bestimmtes suchen.",
+  "mobil": "0170 4023929",
+  "telefon_zum_anrufen": "+49338370209063",
   "adresse": {
     "strasse": "Seestraße 2",
     "plz_ort": "14778 Beetzsee, OT Brielow"
   },
-  "telefon": "03383 70209063",
-  "telefon_zum_anrufen": "+49338370209063",
-  "mobil": "0170 4023929",
-  "mobil_zum_anrufen": "+491704023929",
-  "email": "gartengestaltung@mplant-brielow.de",
   "instagram": "mplant_brielow",
+  "mobil_zum_anrufen": "+491704023929",
+  "telefon": "03383 70209063",
   "oeffnungszeiten": {
     "montag": "geschlossen",
     "dienstag": "geschlossen",
     "mittwoch": "geschlossen",
-    "donnerstag": "11:00 bis 18:00",
-    "freitag": "11:00 bis 18:00",
-    "samstag": "10:00 bis 13:00",
+    "donnerstag": "11:00 bis 18:00 Uhr",
+    "freitag": "11:00 bis 18:00 Uhr",
+    "samstag": "10:00 bis 13:00 Uhr",
     "sonntag": "geschlossen",
     "hinweis": "Saisonzeiten können variieren. Rufen Sie im Zweifel kurz an."
-  }
+  },
+  "email": "gartengestaltung@mplant-brielow.de",
+  "haupt_ueberschrift": "Kommen Sie vorbei.",
+  "ueberschrift": "Kontakt"
 }
