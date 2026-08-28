@@ -167,10 +167,16 @@
 
   function applyKarriereTeaser(data) {
     const teaser = document.querySelector('[data-cms-teaser]');
-    if (!teaser) return;
     const cfg = data.karriere_teaser;
-    if (cfg && cfg.anzeigen === false) {
+    const hide = cfg && cfg.anzeigen === false;
+    if (teaser && hide) {
       teaser.style.display = 'none';
+    }
+    // Wenn Karriere ausgeblendet ist, auch Nav-Link und Footer-Link ausblenden
+    if (hide) {
+      document.querySelectorAll('.js-karriere-link').forEach(el => {
+        el.style.display = 'none';
+      });
     }
   }
 
